@@ -203,7 +203,7 @@ load_aupvb_leaderboards <- function(seasons = NULL) {
 #' @param seasons int, list of int, or None, optional
 #'                Season(s) to load. By default, None loads all available seasons.
 #'                - int: Single season year (e.g., 2024)
-#'                - list of int: Multiple seasons (e.g., c(2021, 2022), c(2021:2024))
+#'                - list of int: Multiple seasons (e.g., c(2021, 2022), 2021:2024)
 #'                - None: Load all available seasons
 #'
 #'                All years must be 2021 or later.
