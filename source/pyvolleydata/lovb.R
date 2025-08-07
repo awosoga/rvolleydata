@@ -1,10 +1,10 @@
 #' Load cleaned lovb officials data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or None, optional
-#'                Season(s) to load. By default, None loads all available seasons.
+#' @param seasons int, list of int, or NULL, optional
+#'                Season(s) to load. By default, NULL loads all available seasons.
 #'                - int: Single season year (e.g., 2025)
 #'                - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'                - None: Load all available seasons
+#'                - NULL: Load all available seasons
 #'
 #'                All years must be 2024 or later.
 #'
@@ -46,11 +46,11 @@ load_lovb_officials <- function(seasons = NULL) {
 
 #' Load cleaned lovb point log data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or None, optional
-#'               Season(s) to load. By default, None loads all available seasons.
+#' @param seasons int, list of int, or NULL, optional
+#'               Season(s) to load. By default, NULL loads all available seasons.
 #'               - int: Single season year (e.g., 2025)
 #'               - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'               - None: Load all available seasons
+#'               - NULL: Load all available seasons
 #'
 #'               All years must be 2024 or later.
 #'
@@ -98,11 +98,11 @@ load_lovb_points_log <- function(seasons = NULL) {
 
 #' Load cleaned lovb play-by-play data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or None, optional
-#'               Season(s) to load. By default, None loads all available seasons.
+#' @param seasons int, list of int, or NULL, optional
+#'               Season(s) to load. By default, NULL loads all available seasons.
 #'               - int: Single season year (e.g., 2025)
 #'               - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'               - None: Load all available seasons
+#'               - NULL: Load all available seasons
 #'
 #'               All years must be 2024 or later.
 #'
@@ -164,11 +164,11 @@ load_lovb_pbp <- function(seasons = NULL) {
 
 #' Load cleaned lovb player boxscore data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or None, optional
-#'               Season(s) to load. By default, None loads all available seasons.
+#' @param seasons int, list of int, or NULL, optional
+#'               Season(s) to load. By default, NULL loads all available seasons.
 #'               - int: Single season year (e.g., 2025)
 #'               - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'               - None: Load all available seasons
+#'               - NULL: Load all available seasons
 #'
 #'               All years must be 2024 or later.
 #'
@@ -229,11 +229,11 @@ load_lovb_player_boxscore <- function(seasons = NULL) {
 
 #' Load cleaned lovb team staff data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or None, optional
-#'               Season(s) to load. By default, None loads all available seasons.
+#' @param seasons int, list of int, or NULL, optional
+#'               Season(s) to load. By default, NULL loads all available seasons.
 #'               - int: Single season year (e.g., 2025)
 #'               - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'               - None: Load all available seasons
+#'               - NULL: Load all available seasons
 #'
 #'               All years must be 2024 or later.
 #'
