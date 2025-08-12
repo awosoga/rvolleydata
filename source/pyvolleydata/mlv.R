@@ -1,5 +1,21 @@
 source("R/utils.R")
 
+load_mlv_schedule <- function(seasons = NULL) {
+  current_year <- as.integer(format(Sys.Date(), "%Y"))
+
+  if (is.null(seasons)) {
+    seasons <- 2024:current_year
+  } else {
+    validate_seasons(seasons, 2024)
+  }
+
+  schedule <- readr::read_csv(
+    "https://github.com/awosoga/volleydata/releases/download/pvf-schedule/pvf_schedule.csv"
+  )
+  schedule <- player_info |> dplyr::filter(season %in% seasons)
+  return(schedule)
+}
+
 #' Load cleaned mlv officials data from the volleydata repository.
 #'
 #' @param seasons int, list of int, or NULL, optional
@@ -14,14 +30,14 @@ source("R/utils.R")
 #' --------------------------------  -----------
 #' Column Name                        Type
 #' --------------------------------  -----------
-#' match_id                           dbl
-#' season                             dbl
-#' match_datetime                     chr
-#' officials_type                     chr
-#' full_name                          chr
-#' first_name                         chr
-#' last_name                          chr
-#' level                              chr
+#' match_id                           int
+#' season                             int
+#' match_datetime                     string
+#' officials_type                     string
+#' full_name                          string
+#' first_name                         string
+#' last_name                          string
+#' level                              string
 #' --------------------------------  -----------
 #' @export
 #'
@@ -59,20 +75,20 @@ load_mlv_officials <- function(seasons = NULL) {
 #' --------------------------------  -----------
 #' Column Name                        Type
 #' --------------------------------  -----------
-#' match_id                           dbl
-#' season                             dbl
-#' match_datetime                     chr
-#' home_team_name                     chr
-#' away_team_name                     chr
-#' team_involved                      chr
-#' jersey_number                      dbl
-#' action                             chr
-#' outcome                            chr
-#' set                                dbl
-#' point_number                       dbl
-#' point_winner                       chr
-#' home_score                         dbl
-#' away_score                         dbl
+#' match_id                           int
+#' season                             int
+#' match_datetime                     string
+#' home_team_name                     string
+#' away_team_name                     string
+#' team_involved                      string
+#' jersey_number                      int
+#' action                             string
+#' outcome                            string
+#' set                                int
+#' point_number                       int
+#' point_winner                       string
+#' home_score                         int
+#' away_score                         int
 #' --------------------------------  -----------
 #' @export
 #'
@@ -205,4 +221,92 @@ load_mlv_team_staff <- function(seasons = NULL) {
   )
   team_staff <- player_info |> dplyr::filter(season %in% seasons)
   return(team_staff)
+}
+
+#' Load cleaned mlv events log data from the volleydata repository.
+#'
+#' @param seasons int, list of int, or NULL, optional
+#'                Season(s) to load. By default, NULL loads all available seasons.
+#'                - int: Single season year (e.g., 2025)
+#'                - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
+#'                - NULL: Load all available seasons
+#'
+#'                All years must be 2024 or later.
+#'
+#' @returns
+#' --------------------------------  -----------
+#' Column Name                        Type
+#' --------------------------------  -----------
+#' match_id                           int
+#' season                             int
+#' match_datetime                     string
+#' set                                int
+#' set_start_time                     string
+#' set_end_time                       string
+#' set_duration                       int
+#' set_final_home_score               int
+#' set_final_away_score               int
+#' event_type                         string
+#' event_time                         string
+#' libero_enters                      bool
+#' team_involved                      string
+#' libero_jersey_number               int
+#' libero_subsitute_jersey_number     int
+#' rally_start_time                   string
+#' rally_end_time                     string
+#' rally_point_winner                 string
+#' substitute_in_jersey_number        int
+#' substitute_out_jersey_number       int
+#' challenge_approved                 string
+#' challenge_reason                   string
+#' challenge_method                   string
+#' challenge_response                 string
+#' challenge_at_home_score            float
+#' challenge_at_away_score            float
+#' challenge_score_change             string
+#' serving_team                       string
+#' current_home_score                 float
+#' current_away_score                 float
+#' home_team_p1                       float
+#' home_team_p2                       float
+#' home_team_p3                       float
+#' home_team_p4                       float
+#' home_team_p5                       float
+#' home_team_p6                       float
+#' away_team_p1                       float
+#' away_team_p2                       float
+#' away_team_p3                       float
+#' away_team_p4                       float
+#' away_team_p5                       float
+#' away_team_p6                       float
+#' verified_time                      string
+#' verified_method                    string
+#' sanction_type                      string
+#' sanction_remark                    float
+#' sanction_staff_role                string
+#' staff_first_name                   string
+#' staff_last_name                    string
+#' staff_type                         string
+#' is_exceptional                     string
+#' --------------------------------  -----------
+#' @export
+#'
+#' @examples
+#' `load_mlv_events_log(2024)`
+#' `load_mlv_events_log(2024:2025)`
+#' `load_mlv_events_log()`
+load_mlv_events_log <- function(seasons = NULL) {
+  current_year <- as.integer(format(Sys.Date(), "%Y"))
+
+  if (is.null(seasons)) {
+    seasons <- 2024:current_year
+  } else {
+    validate_seasons(seasons, 2024)
+  }
+
+  events_log <- readr::read_csv(
+    paste0("https://github.com/awosoga/volleydata/releases/download/pvf-events-log/pvf_events_log", season, ".csv")
+  )
+  events_log <- player_info |> dplyr::filter(season %in% seasons)
+  return(events_log)
 }

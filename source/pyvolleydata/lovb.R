@@ -1,3 +1,52 @@
+source("R/utils.R")
+
+#' Load cleaned lovb schedule data from the volleydata repository.
+#'
+#' @param seasons int, list of int, or NULL, optional
+#'                Season(s) to load. By default, NULL loads all available seasons.
+#'                - int: Single season year (e.g., 2025)
+#'                - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
+#'                - NULL: Load all available seasons
+#'
+#'                All years must be 2024 or later.
+#'
+#' @returns
+#' --------------------------------  -----------
+#' Column Name                        Type
+#' --------------------------------  -----------
+#' season                             int
+#' date                               string
+#' round                              string
+#' home_team                          string
+#' away_team                          string
+#' home_team_set_wins                 int
+#' away_team_set_wins                 int
+#' match_link                         string
+#' secondary_link                     string
+#' match_id                           int
+#' --------------------------------  -----------
+#' @export
+#'
+#' @examples
+#' `load_lovb_schedule(2024)`
+#' `load_lovb_schedule(2024:2025)`
+#' `load_lovb_schedule()`
+load_lovb_schedule <- function(seasons = NULL) {
+  current_year <- as.dbleger(format(Sys.Date(), "%Y"))
+
+  if (is.null(seasons)) {
+    seasons <- 2024:current_year
+  } else {
+    validate_seasons(seasons, 2024)
+  }
+
+  schedule <- readr::read_csv(
+    "https://github.com/awosoga/volleydata/releases/download/lovb-officials/lovb_officials.csv"
+  )
+  schedule <- player_info |> dplyr::filter(season %in% seasons)
+  return(schedule)
+}
+
 #' Load cleaned lovb officials data from the volleydata repository.
 #'
 #' @param seasons int, list of int, or NULL, optional
@@ -44,58 +93,6 @@ load_lovb_officials <- function(seasons = NULL) {
 }
 
 
-#' Load cleaned lovb point log data from the volleydata repository.
-#'
-#' @param seasons int, list of int, or NULL, optional
-#'               Season(s) to load. By default, NULL loads all available seasons.
-#'               - int: Single season year (e.g., 2025)
-#'               - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'               - NULL: Load all available seasons
-#'
-#'               All years must be 2024 or later.
-#'
-#' @returns
-#' --------------------------------  -----------
-#' Column Name                        Type
-#' --------------------------------  -----------
-#' match_id                           dbl
-#' season                             dbl
-#' match_datetime                     chr
-#' home_team_name                     chr
-#' away_team_name                     chr
-#' team_involved                      chr
-#' jersey_number                      dbl
-#' action                             chr
-#' outcome                            chr
-#' set                                dbl
-#' point_number                       dbl
-#' point_winner                       chr
-#' home_score                         dbl
-#' away_score                         dbl
-#' --------------------------------  -----------
-#' @export
-#'
-#' @examples
-#' `load_lovb_points_log(2024)`
-#' `load_lovb_points_log(2024:2025)`
-#' `load_lovb_points_log()`
-load_lovb_points_log <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
-
-  if (is.null(seasons)) {
-    seasons <- 2024:current_year
-  } else {
-    validate_seasons(seasons, 2024)
-  }
-
-  points_log <- readr::read_csv(
-    "https://github.com/awosoga/volleydata/releases/download/lovb-officials/lovb_officials.csv"
-  )
-  points_log <- player_info |> dplyr::filter(season %in% seasons)
-  return(points_log)
-}
-
-
 #' Load cleaned lovb play-by-play data from the volleydata repository.
 #'
 #' @param seasons int, list of int, or NULL, optional
@@ -110,30 +107,20 @@ load_lovb_points_log <- function(seasons = NULL) {
 #' --------------------------------  -----------
 #' Column Name                        Type
 #' --------------------------------  -----------
-#' match_id                           dbl
-#' season                             dbl
-#' match_datetime                     chr
-#' set                                dbl
-#' set_start_time                     chr
-#' set_end_time                       chr
-#' set_duration                       dbl
-#' set_home_score                     dbl
-#' set_away_score                     dbl
-#' event_type                         chr
-#' event_time                         chr
-#' libero_enters                      lgl
-#' team_involved                      chr
-#' libero_jersey_number               dbl
-#' libero_subsitute_jersey_number     dbl
-#' rally_start_time                   chr
-#' rally_end_time                     chr
-#' point_team                         chr
-#' call_approved                      lgl
-#' player_in_jersey_number            dbl
-#' player_out_jersey_number           dbl
-#' challenge_reason                   chr
-#' current_home_score                 dbl
-#' current_away_score                 dbl
+#' match_id                           int
+#' season                             int
+#' match_datetime                     string
+#' home_team_name                     string
+#' away_team_name                     string
+#' team_involved                      string
+#' jersey_number                      int
+#' action                             string
+#' outcome                            string
+#' set                                int
+#' point_number                       int
+#' point_winner                       string
+#' home_score                         int
+#' away_score                         int
 #' --------------------------------  -----------
 #' @export
 #'
@@ -154,7 +141,7 @@ load_lovb_pbp <- function(seasons = NULL) {
 
   for(season in seasons) {
     temp <- readr::read_csv(
-      paste0("https://github.com/awosoga/volleydata/releases/download/aupvb-pbp/aupvb_pbp_", season, ".csv")
+      paste0("https://github.com/awosoga/volleydata/releases/download/lovb-pbp/lovb_pbp_", season, ".csv")
     )
     pbp <- dplyr::bind_rows(pbp, temp)
   }
@@ -270,4 +257,46 @@ load_lovb_team_staff <- function(seasons = NULL) {
   )
   team_staff <- player_info |> dplyr::filter(season %in% seasons)
   return(team_staff)
+}
+
+#' Load cleaned lovb events log data from the volleydata repository.
+#'
+#' @param seasons int, list of int, or NULL, optional
+#'               Season(s) to load. By default, NULL loads all available seasons.
+#'               - int: Single season year (e.g., 2025)
+#'               - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
+#'               - NULL: Load all available seasons
+#'
+#'               All years must be 2024 or later.
+#'
+#' @returns
+#' --------------------------------  -----------
+#'   Column Name                        Type
+#' --------------------------------  -----------
+#' match_id                           int
+#' season                             int
+#' match_datetime                     string
+#' team_name                          string
+#' staff_type                         string
+#' full_name                          string
+#' first_name                         string
+#' last_name                          string
+#' --------------------------------  -----------
+#' @export
+#'
+#' @examples
+load_lovb_events_log <- function(seasons = NULL) {
+  current_year <- as.dbleger(format(Sys.Date(), "%Y"))
+
+  if (is.null(seasons)) {
+    seasons <- 2024:current_year
+  } else {
+    validate_seasons(seasons, 2024)
+  }
+
+  events_log <- readr::read_csv(
+    paste0("https://github.com/awosoga/volleydata/releases/download/lovb-events-log/lovb_events_log_", season, ".csv")
+  )
+  events_log <- player_info |> dplyr::filter(season %in% seasons)
+  return(events_log)
 }
