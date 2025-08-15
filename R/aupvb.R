@@ -8,7 +8,7 @@ source("R/utils.R")
 #'                - list of int : Multiple seasons (e.g., c(2021, 2022), c(2021:2024))
 #'                - NULL : Load all available seasons
 #'
-#'                All yeasr must be 2021 or later
+#'                All years must be 2021 or later
 #'
 #' @returns A data frame containing player information for the specified seasons.
 #' -------------------------------------  -----------
