@@ -2,12 +2,22 @@ Package: rvolleydata
 Title: Extract Data from Professional Volleyball Leagues in North America
 Version: 0.0.0.9000
 Authors@R: 
-    person("David", "Awosoga", , "odo.awosoga@gmail.com", role = c("aut", "cre", "cph"),
-           comment = c(ORCID = "0000-0002-2741-5770"))
+    c(person("David", "Awosoga", , "odo.awosoga@gmail.com", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0002-2741-5770")),
+    person("Matthew", "Chow", , "mc2chow@uwaterloo.ca", role = c("aut"),
+           comment = c(ORCID = "0009-0009-6045-6839")))
 Description: Gather boxscore, play-by-play, and auxiliary data from Major League Volleyball (MLV) <https://provolleyball.com>, League One Volleyball Pro (LOVB Pro) <https://www.lovb.com/pro-league>, and Athletes Unlimited Pro Volleyball <https://auprosports.com/volleyball/> to create a repository of basic and advanced statistics for teams and players.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-URL: https://github.com/awosoga/rvolleydata
+URL: https://github.com/awosoga/rvolleydata, https://awosoga.github.io/rvolleydata/
 BugReports: https://github.com/awosoga/rvolleydata/issues
+Imports: 
+    dplyr,
+    lubridate,
+    readr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
