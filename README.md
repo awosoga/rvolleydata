@@ -16,8 +16,7 @@ The goal of `rvolleydata` is to help people access clean and tidy data
 from [League One Volleyball Pro (LOVB)](https://www.lovb.com/),
 [Athletes Unlimited Pro Volleyball
 (AUPVB)](https://auprosports.com/volleyball/), and [Major League
-Volleyball and Pro Volleyball Federation
-(MLV)](https://provolleyball.com/) leagues.
+Volleyball(MLV)](https://provolleyball.com/) leagues.
 
 ## Installations
 

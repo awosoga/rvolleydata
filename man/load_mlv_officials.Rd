@@ -33,6 +33,6 @@ Season(s) to load. By default, NULL loads all available seasons.
 Load cleaned mlv officials data from the volleydata repository.
 }
 \examples{
-load_mlv_officials(2024)
+try({load_mlv_officials(2024)})
 
 }

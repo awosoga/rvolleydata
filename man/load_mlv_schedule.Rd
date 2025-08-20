@@ -34,5 +34,5 @@ Season(s) to load. By default, NULL loads all available seasons.
 Load cleaned mlv schedule data from the volleydata repository.
 }
 \examples{
-load_mlv_schedule(2024)
+try({load_mlv_schedule(2024)})
 }

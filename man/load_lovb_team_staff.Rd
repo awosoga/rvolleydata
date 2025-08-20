@@ -33,5 +33,5 @@ A data frame containing the team staff data for the specified seasons.\tabular{l
 Load cleaned lovb team staff data from the volleydata repository.
 }
 \examples{
-load_lovb_team_staff(2025)
+try({load_lovb_team_staff(2025)})
 }

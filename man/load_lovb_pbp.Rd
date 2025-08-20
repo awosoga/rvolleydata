@@ -39,5 +39,5 @@ A data frame containing the play-by-play data for the specified seasons.\tabular
 Load cleaned lovb play-by-play data from the volleydata repository.
 }
 \examples{
-load_lovb_pbp(2025)
+try({load_lovb_pbp(2025)})
 }

@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-This vignette will outline how to use the functions in the `rvolleydata` package to access data from League One Volleyball Pro (LOVB), Athletes Unlimited Pro Volleyball (AUPVB), and Major League Volleyball and Pro Volleyball Federation (MLV) leagues.
+This vignette will outline how to use the functions in the `rvolleydata` package to access data from League One Volleyball Pro (LOVB), Athletes Unlimited Pro Volleyball (AUPVB), and Major League Volleyball (MLV) leagues.
 
 ```{r setup}
 library(rvolleydata)

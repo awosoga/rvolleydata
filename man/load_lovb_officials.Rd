@@ -33,5 +33,5 @@ A data frame containing the officials data for the specified seasons.\tabular{ll
 Load cleaned lovb officials data from the volleydata repository.
 }
 \examples{
-load_lovb_officials(2025)
+try({load_lovb_officials(2025)})
 }

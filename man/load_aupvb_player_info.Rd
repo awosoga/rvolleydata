@@ -78,5 +78,5 @@ A data frame containing player information for the specified seasons.\tabular{ll
 Load cleaned aupvb player info data from the volleydata repository
 }
 \examples{
-load_aupvb_player_info(2024)
+try({load_aupvb_player_info(2024)})
 }

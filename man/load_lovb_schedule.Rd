@@ -35,5 +35,5 @@ A data frame containing the schedule data for the specified seasons.\tabular{ll}
 Load cleaned lovb schedule data from the volleydata repository.
 }
 \examples{
-load_lovb_schedule(2025)
+try({load_lovb_schedule(2025)})
 }

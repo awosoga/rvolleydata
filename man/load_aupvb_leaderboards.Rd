@@ -95,5 +95,5 @@ Returns a data frame containing leaderboards for the specified seasons.\tabular{
 Load cleaned aupvb leaderboards data from the volleydata repository
 }
 \examples{
-load_aupvb_leaderboards(2024)
+try({load_aupvb_leaderboards(2024)})
 }

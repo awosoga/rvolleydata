@@ -50,5 +50,5 @@ A data frame containing the player boxscore data for the specified seasons.\tabu
 Load cleaned mlv player boxscore data from the volleydata repository.
 }
 \examples{
-load_mlv_player_boxscore(2024)
+try({load_mlv_player_boxscore(2024)})
 }
