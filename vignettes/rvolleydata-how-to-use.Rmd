@@ -1,0 +1,120 @@
+---
+title: "rvolleydata-how-to-use"
+author: "Matthew Chow"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rvolleydata-how-to-use}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>"
+)
+```
+
+## Overview
+
+This vignette will outline how to use the functions in the `rvolleydata` package to access data from League One Volleyball Pro (LOVB), Athletes Unlimited Pro Volleyball (AUPVB), and Major League Volleyball and Pro Volleyball Federation (MLV) leagues.
+
+```{r setup}
+library(rvolleydata)
+library(dplyr)
+```
+
+## Installation
+
+You can install the development version of [**`rvolleydata`**](https://github.com/awosoga/rvolleydata) from [GitHub](https://github.com/awosoga/rvolleydata) with:
+
+```{r installation, eval=FALSE}
+# install.packages("devtools")
+devtools::isntall_github("awosoga/rvolleydata")
+```
+
+## Usage
+
+The following code snippets will provide information on how to access different volleyball league statistics. The structure of the functions is similar across League One Volleyball Pro (LOVB) and Major League Volleyball (MLV), so LOVB functions will be used as an example.
+
+### Schedules
+
+Use `load_lovb_schedule` to access League One Volleyball Pro (LOVB) schedules.
+
+```{r schedule}
+load_lovb_schedule <- load_lovb_schedule(2025)
+glimpse(load_lovb_schedule)
+```
+
+### Player Info
+
+Use `load_aupvb_player_info` to access Athletes Unlimited Pro Volleyball (AUPV) player information.
+
+```{r player_info}
+load_aupvb_player_info <- load_aupvb_player_info(2024)
+glimpse(load_aupvb_player_info)
+```
+
+### Leaderboards
+
+Use `load_aupvb_leaderboards` to access Athletes Unlimited Pro Volleyball (AUPV) leaderboards.
+
+```{r leaderboards}
+load_aupvb_leaderboards <- load_aupvb_leaderboards(2024)
+glimpse(load_aupvb_leaderboards)
+```
+
+### Play-by-Play
+
+Use `load_aupvb_pbp` to access Athletes Unlimited Pro Volleyball (AUPV) play-by-play data.
+
+```{r aupvb_pbp}
+load_aupvb_pbp <- load_aupvb_pbp(2024)
+glimpse(load_aupvb_pbp)
+```
+
+Use `load_lovb_pbp` to access League One Volleyball Pro (LOVB) play-by-play data.
+
+```{r lovb_pbp}
+load_lovb_pbp <- load_lovb_pbp(2025)
+glimpse(load_lovb_pbp)
+```
+
+### Officials
+
+Use `load_lovb_officials` to access League One Volleyball Pro (LOVB) officials data.
+
+```{r officials}
+load_lovb_officials <- load_lovb_officials(2025)
+glimpse(load_lovb_officials)
+```
+
+### Player Boxscores
+
+Use `load_lovb_player_boxscore` to access League One Volleyball Pro (LOVB) player boxscores.
+
+```{r boxscores}
+load_lovb_player_boxscore <- load_lovb_player_boxscore(2025)
+glimpse(load_lovb_player_boxscore)
+```
+
+### Team Staff
+
+Use `load_lovb_team_staff` to access League One Volleyball Pro (LOVB) team staff data.
+
+```{r team_staff}
+load_lovb_team_staff <- load_lovb_team_staff(2025)
+glimpse(load_lovb_team_staff)
+```
+
+### Events Log
+
+Use `load_lovb_events_log` to access League One Volleyball Pro (LOVB) events log data.
+
+```{r events_log}
+load_lovb_events_log <- load_lovb_events_log(2025)
+glimpse(load_lovb_events_log)
+```
