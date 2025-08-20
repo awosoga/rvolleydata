@@ -70,7 +70,7 @@ utils::globalVariables(c("season", "player_info"))
 #' @export
 #'
 #' @examples
-#' load_aupvb_player_info(2024)
+#' try({load_aupvb_player_info(2024)})
 
 load_aupvb_player_info <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -175,7 +175,7 @@ load_aupvb_player_info <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_aupvb_leaderboards(2024)
+#' try({load_aupvb_leaderboards(2024)})
 
 load_aupvb_leaderboards <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -250,7 +250,7 @@ load_aupvb_leaderboards <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_aupvb_pbp(2024)
+#' try({load_aupvb_pbp(2024)})
 
 load_aupvb_pbp <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))

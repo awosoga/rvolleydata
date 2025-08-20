@@ -27,7 +27,7 @@ utils::globalVariables(c("season", "player_info"))
 #' @export
 #'
 #' @examples
-#' load_lovb_schedule(2025)
+#' try({load_lovb_schedule(2025)})
 
 load_lovb_schedule <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -69,7 +69,7 @@ load_lovb_schedule <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_lovb_officials(2025)
+#' try({load_lovb_officials(2025)})
 
 load_lovb_officials <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -118,7 +118,7 @@ load_lovb_officials <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_lovb_pbp(2025)
+#' try({load_lovb_pbp(2025)})
 
 load_lovb_pbp <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -185,7 +185,7 @@ load_lovb_pbp <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_lovb_player_boxscore(2025)
+#' try({load_lovb_player_boxscore(2025)})
 
 load_lovb_player_boxscore <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -227,7 +227,7 @@ load_lovb_player_boxscore <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_lovb_team_staff(2025)
+#' try({load_lovb_team_staff(2025)})
 
 load_lovb_team_staff <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -269,7 +269,7 @@ load_lovb_team_staff <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_lovb_events_log(2025)
+#' try({load_lovb_events_log(2025)})
 
 load_lovb_events_log <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))

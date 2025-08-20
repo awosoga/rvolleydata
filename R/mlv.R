@@ -26,7 +26,7 @@ utils::globalVariables(c("season", "player_info"))
 #' @export
 #'
 #' @examples
-#' load_mlv_schedule(2024)
+#' try({load_mlv_schedule(2024)})
 
 load_mlv_schedule <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -68,7 +68,7 @@ load_mlv_schedule <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_mlv_officials(2024)
+#' try({load_mlv_officials(2024)})
 #'
 load_mlv_officials <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -116,7 +116,7 @@ load_mlv_officials <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_mlv_pbp(2024)
+#' try({load_mlv_pbp(2024)})
 
 load_mlv_pbp <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -181,7 +181,7 @@ load_mlv_pbp <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_mlv_player_boxscore(2024)
+#' try({load_mlv_player_boxscore(2024)})
 
 load_mlv_player_boxscore <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -223,7 +223,7 @@ load_mlv_player_boxscore <- function(seasons = NULL) {
 #' @export
 #
 #' @examples
-#' load_mlv_team_staff(2024)
+#' try({load_mlv_team_staff(2024)})
 
 load_mlv_team_staff <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -308,7 +308,7 @@ load_mlv_team_staff <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' load_mlv_events_log(2024)
+#' try({load_mlv_events_log(2024)})
 
 load_mlv_events_log <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
