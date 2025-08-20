@@ -1,3 +1,3 @@
-# rvolleydata (development version)
+# rvolleydata 1.0.0
 
 * Initial CRAN submission.
