@@ -40,5 +40,5 @@ devtools::install_github("awosoga/rvolleydata")
 ## Usage
 
 Please refer to the [package
-vignette](https://awosoga.github.io/rvolleydata/articles/how-to-use-rvolleydata)
+vignette](https://awosoga.github.io/rvolleydata/articles/rvolleydata-how-to-use)
 for more information on how to use this library.

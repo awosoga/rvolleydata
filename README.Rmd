@@ -40,4 +40,4 @@ devtools::install_github("awosoga/rvolleydata")
 
 ## Usage
 
-Please refer to the [package vignette](https://awosoga.github.io/rvolleydata/articles/how-to-use-rvolleydata) for more information on how to use this library.
+Please refer to the [package vignette](https://awosoga.github.io/rvolleydata/articles/rvolleydata-how-to-use) for more information on how to use this library.
