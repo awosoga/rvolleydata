@@ -3,7 +3,7 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   rvolleydata-how-to-use: rvolleydata-how-to-use.html
-last_built: 2025-08-20T20:38Z
+last_built: 2025-08-20T20:42Z
 urls:
   reference: https://awosoga.github.io/rvolleydata/reference
   article: https://awosoga.github.io/rvolleydata/articles
