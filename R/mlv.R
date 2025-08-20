@@ -268,7 +268,7 @@ load_mlv_team_staff <- function(seasons = NULL) {
 #' |libero_enters                    |  bool   |
 #' |team_involved                    |  string |
 #' |libero_jersey_number             |  int    |
-#' |libero_subsitute_jersey_number   |  int    |
+#' |libero_substitute_jersey_number  |  int    |
 #' |rally_start_time                 |  string |
 #' |rally_end_time                   |  string |
 #' |rally_point_winner               |  string |
