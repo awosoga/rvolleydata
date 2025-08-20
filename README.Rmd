@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 The goal of rvolleydata is to help people access clean and tidy data from [League One Volleyball Pro (LOVB)](https://www.lovb.com/), [Athletes Unlimited Pro Volleyball (AUPVB)](https://auprosports.com/volleyball/), and [Major League Volleyball and Pro Volleyball Federation (MLV)](https://provolleyball.com/) leagues.
 
-## Installation
+## Installations
 
 You can install the CRAN version of [**`rvolleydata`**](https://CRAN.R-project.org/package=rvolleydata) with:
 

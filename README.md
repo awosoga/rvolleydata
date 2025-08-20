@@ -3,14 +3,14 @@
 
 # rvolleydata <a href="https://awosoga.github.io/rvolleydata/"><img src="man/rvolleydata-logo.jpg" align="right" height="120"/></a>
 
-badges: start
+<!-- badges: start -->
 
 [![R-CMD-check](https://github.com/awosoga/rvolleydata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/awosoga/rvolleydata/actions/workflows/R-CMD-check.yaml)
 [![Version-Number](https://img.shields.io/github/r-package/v/awosoga/rvolleydata?label=rvolleydata)](https://github.com/awosoga/rvolleydata)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 
-badges: end
+<!-- badges: end -->
 
 The goal of rvolleydata is to help people access clean and tidy data
 from [League One Volleyball Pro (LOVB)](https://www.lovb.com/),
@@ -19,7 +19,7 @@ from [League One Volleyball Pro (LOVB)](https://www.lovb.com/),
 Volleyball and Pro Volleyball Federation
 (MLV)](https://provolleyball.com/) leagues.
 
-## Installation
+## Installations
 
 You can install the CRAN version of
 [**`rvolleydata`**](https://CRAN.R-project.org/package=rvolleydata)
@@ -34,7 +34,7 @@ You can install the development version of rvolleydata from
 
 ``` r
 # install.packages("devtools")
-devtools::isntall_github("awosoga/rvolleydata")
+devtools::install_github("awosoga/rvolleydata")
 ```
 
 ## Usage
