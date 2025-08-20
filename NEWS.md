@@ -17,5 +17,5 @@
 * `load_mlv_schedule()`
 * `load_mlv_team_staff()`
 
-* Added logo and badgest to README file. 
+* Added logo and badges to README file. 
 * Initial CRAN submission.
