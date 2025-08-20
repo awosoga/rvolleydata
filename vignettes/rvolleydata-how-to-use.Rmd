@@ -1,5 +1,5 @@
 ---
-title: "rvolleydata-how-to-use"
+title: "How to use rvolleydata"
 author: "Matthew Chow"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -33,7 +33,7 @@ You can install the development version of [**`rvolleydata`**](https://github.co
 
 ```{r installation, eval=FALSE}
 # install.packages("devtools")
-devtools::isntall_github("awosoga/rvolleydata")
+devtools::install_github("awosoga/rvolleydata")
 ```
 
 ## Usage
