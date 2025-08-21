@@ -7,14 +7,7 @@
 load_mlv_events_log(seasons = NULL)
 }
 \arguments{
-\item{seasons}{int, list of int, or NULL, optional
-Season(s) to load. By default, NULL loads all available seasons.
-- int: Single season year (e.g., 2025)
-- list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-- NULL: Load all available seasons
-
-\if{html}{\out{<div class="sourceCode">}}\preformatted{           All years must be 2024 or later.
-}\if{html}{\out{</div>}}}
+\item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.}
 }
 \value{
 A data frame containing the events log data for the specified seasons.\tabular{ll}{
@@ -33,7 +26,7 @@ A data frame containing the events log data for the specified seasons.\tabular{l
    libero_enters \tab bool \cr
    team_involved \tab string \cr
    libero_jersey_number \tab int \cr
-   libero_subsitute_jersey_number \tab int \cr
+   libero_substitute_jersey_number \tab int \cr
    rally_start_time \tab string \cr
    rally_end_time \tab string \cr
    rally_point_winner \tab string \cr
@@ -76,5 +69,5 @@ A data frame containing the events log data for the specified seasons.\tabular{l
 Load cleaned mlv events log data from the volleydata repository.
 }
 \examples{
-try({load_mlv_events_log(2024)})
+\dontrun{try({load_mlv_events_log(2024)})}
 }

@@ -19,7 +19,8 @@ Depends: R (>= 4.1.0)
 Imports: 
     dplyr,
     lubridate,
-    readr
+    readr,
+    tibble
 Suggests: 
     knitr,
     rmarkdown

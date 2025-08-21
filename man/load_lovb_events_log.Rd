@@ -7,14 +7,7 @@
 load_lovb_events_log(seasons = NULL)
 }
 \arguments{
-\item{seasons}{int, list of int, or NULL, optional
-Season(s) to load. By default, NULL loads all available seasons.
-- int: Single season year (e.g., 2025)
-- list of int: Multiple seasons (e.g., c(2025, 2026), 2025:2026)
-- NULL: Load all available seasons
-
-\if{html}{\out{<div class="sourceCode">}}\preformatted{          All years must be 2025 or later.
-}\if{html}{\out{</div>}}}
+\item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.}
 }
 \value{
 A data frame containing the events log data for the specified seasons.\tabular{ll}{
@@ -33,5 +26,5 @@ A data frame containing the events log data for the specified seasons.\tabular{l
 Load cleaned lovb events log data from the volleydata repository.
 }
 \examples{
-try({load_lovb_events_log(2025)})
+\dontrun{try({load_lovb_events_log(2025)})}
 }

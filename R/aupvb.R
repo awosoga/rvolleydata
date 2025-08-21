@@ -3,13 +3,7 @@ utils::globalVariables(c("season", "player_info"))
 
 #' Load cleaned aupvb player info data from the volleydata repository
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'                Season(s) to load. By default, NULL loads all available seasons.
-#'                - int : Single season year (e.g., 2024)
-#'                - list of int : Multiple seasons (e.g., c(2021, 2022), c(2021:2024))
-#'                - NULL : Load all available seasons
-#'
-#'                All years must be 2021 or later
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing player information for the specified seasons.
 #' |Column Name                           |  Type |
@@ -91,13 +85,7 @@ load_aupvb_player_info <- function(seasons = NULL) {
 
 #' Load cleaned aupvb leaderboards data from the volleydata repository
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'                Season(s) to load. By default, NULL loads all available seasons.
-#'                - int: Single season year (e.g., 2024)
-#'                - list of int: Multiple seasons (e.g., c(2021, 2022), c(2021:2024))
-#'                - NULL: Load all available seasons
-#'
-#'                All years must be 2021 or later.
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns Returns a data frame containing leaderboards for the specified seasons.
 #' |Column Name                           |  Type |
@@ -195,13 +183,7 @@ load_aupvb_leaderboards <- function(seasons = NULL) {
 
 #' Load cleaned aupvb pbp data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'                Season(s) to load. By default, NULL loads all available seasons.
-#'                - int: Single season year (e.g., 2024)
-#'                - list of int: Multiple seasons (e.g., c(2021, 2022), 2021:2024)
-#'                - NULL: Load all available seasons
-#'
-#'                All years must be 2021 or later.
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing play-by-play data for the specified seasons.
 #' |Column Name                           |  Type |

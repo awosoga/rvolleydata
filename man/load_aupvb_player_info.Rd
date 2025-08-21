@@ -7,14 +7,7 @@
 load_aupvb_player_info(seasons = NULL)
 }
 \arguments{
-\item{seasons}{int, list of int, or NULL, optional
-Season(s) to load. By default, NULL loads all available seasons.
-- int : Single season year (e.g., 2024)
-- list of int : Multiple seasons (e.g., c(2021, 2022), c(2021:2024))
-- NULL : Load all available seasons
-
-\if{html}{\out{<div class="sourceCode">}}\preformatted{           All years must be 2021 or later
-}\if{html}{\out{</div>}}}
+\item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.}
 }
 \value{
 A data frame containing player information for the specified seasons.\tabular{ll}{

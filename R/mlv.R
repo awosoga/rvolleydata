@@ -3,11 +3,7 @@ utils::globalVariables(c("season", "player_info"))
 
 #' Load cleaned mlv schedule data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'                Season(s) to load. By default, NULL loads all available seasons.
-#'                - int: Single season year (e.g., 2025)
-#'                - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'                - NULL: Load all available seasons
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #'                All years must be 2024 or later.
 #'
@@ -46,13 +42,7 @@ load_mlv_schedule <- function(seasons = NULL) {
 
 #' Load cleaned mlv officials data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'               Season(s) to load. By default, NULL loads all available seasons.
-#'               - int: Single season year (e.g., 2025)
-#'               - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'               - NULL: Load all available seasons
-#'
-#'               All years must be 2024 or later.
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns
 #' |Column Name                      |  Type   |
@@ -88,13 +78,7 @@ load_mlv_officials <- function(seasons = NULL) {
 
 #' Load cleaned mlv points log data form the volleydata repository.
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'              Season(s) to load. By default, NULL loads all available seasons.
-#'              - int: Single season year (e.g., 2025)
-#'              - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'              - NULL: Load all available seasons
-#'
-#'              All years must be 2024 or later.
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the play-by-play data for the specified seasons.
 #' |Column Name                      |  Type   |
@@ -116,7 +100,7 @@ load_mlv_officials <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' try({load_mlv_pbp(2024)})
+#' \dontrun{try({load_mlv_pbp(2024)})}
 
 load_mlv_pbp <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -127,7 +111,7 @@ load_mlv_pbp <- function(seasons = NULL) {
     validate_seasons(seasons, 2024)
   }
 
-  pbp <- data.frame()
+  pbp <- tibble::tibble()
 
   for(season in seasons) {
     temp <- readr::read_csv(
@@ -141,12 +125,7 @@ load_mlv_pbp <- function(seasons = NULL) {
 
 #' Load cleaned mlv player boxscore data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'                Season(s) to load. By default, NULL loads all available seasons.
-#'                - int: Single season year (e.g., 2025)
-#'                - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'                - NULL: Load all available seasons
-#'                All years must be 2024 or later.
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the player boxscore data for the specified seasons.
 #' |Column Name                      |  Type |
@@ -201,13 +180,7 @@ load_mlv_player_boxscore <- function(seasons = NULL) {
 
 #' Load cleaned mlv team staff data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'              Season(s) to load. By default, NULL loads all available seasons.
-#'              - int: Single season year (e.g., 2025)
-#'              - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'              - NULL: Load all available seasons
-#'
-#'              All years must be 2024 or later.
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the team staff data for the specified seasons.
 #' |Column Name                      |  Type |
@@ -243,13 +216,7 @@ load_mlv_team_staff <- function(seasons = NULL) {
 
 #' Load cleaned mlv events log data from the volleydata repository.
 #'
-#' @param seasons int, list of int, or NULL, optional
-#'                Season(s) to load. By default, NULL loads all available seasons.
-#'                - int: Single season year (e.g., 2025)
-#'                - list of int: Multiple seasons (e.g., c(2024, 2024), 2024:2025)
-#'                - NULL: Load all available seasons
-#'
-#'                All years must be 2024 or later.
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the events log data for the specified seasons.
 #' |Column Name                      |  Type   |
@@ -308,7 +275,7 @@ load_mlv_team_staff <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' try({load_mlv_events_log(2024)})
+#' \dontrun{try({load_mlv_events_log(2024)})}
 
 load_mlv_events_log <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -319,11 +286,13 @@ load_mlv_events_log <- function(seasons = NULL) {
     validate_seasons(seasons, 2024)
   }
 
+  events_log <- tibble::tibble()
+
   for(season in seasons) {
-    events_log <- readr::read_csv(
+    temp <- readr::read_csv(
       paste0("https://github.com/awosoga/volleydata/releases/download/pvf-events-log/pvf_events_log_", seasons, ".csv")
     )
+    events_log <- dplyr::bind_rows(events_log, temp)
   }
-  events_log <- events_log |> dplyr::filter(season %in% seasons)
   return(events_log)
 }
