@@ -50,12 +50,7 @@
 
 
 <dl><dt id="arg-seasons">seasons<a class="anchor" aria-label="anchor" href="#arg-seasons"></a></dt>
-<dd><p>int, list of int, or NULL, optional
-Season(s) to load. By default, NULL loads all available seasons.
-- int: Single season year (e.g., 2025)
-- list of int: Multiple seasons (e.g., c(2025, 2026), 2025:2026)
-- NULL: Load all available seasons</p>
-<p></p><div class="sourceCode"><pre><code><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>          All years must be <span class="dv">2025</span> or later.</span></code></pre><p></p></div></dd>
+<dd><p>An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -64,37 +59,7 @@ Season(s) to load. By default, NULL loads all available seasons.
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="op">{</span><span class="fu">load_lovb_events_log</span><span class="op">(</span><span class="fl">2025</span><span class="op">)</span><span class="op">}</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">19348</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">49</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Delimiter:</span> ","</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">chr</span>  (13): event_type, team_involved, rally_point_winner, challenge_reason, ...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">dbl</span>  (26): match_id, season, set, set_duration, set_final_home_score, set_fi...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">lgl</span>   (3): libero_enters, challenge_approved, sanction_remark</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB;">dttm</span>  (7): match_datetime, set_start_time, set_end_time, event_time, rally_s...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 19,348 × 49</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    match_id season match_datetime        set set_start_time     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>  2<span style="text-decoration: underline;">161</span>068   <span style="text-decoration: underline;">2</span>025 2025-01-09 <span style="color: #949494;">00:30:00</span>     1 2025-01-09 <span style="color: #949494;">00:30:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 19,338 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 44 more variables: set_end_time &lt;dttm&gt;, set_duration &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   set_final_home_score &lt;dbl&gt;, set_final_away_score &lt;dbl&gt;, event_type &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   event_time &lt;dttm&gt;, libero_enters &lt;lgl&gt;, team_involved &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   libero_jersey_number &lt;dbl&gt;, libero_substitute_jersey_number &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   rally_start_time &lt;dttm&gt;, rally_end_time &lt;dttm&gt;, rally_point_winner &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   substitute_in_jersey_number &lt;dbl&gt;, substitute_out_jersey_number &lt;dbl&gt;, …</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="op">{</span><span class="fu">load_lovb_events_log</span><span class="op">(</span><span class="fl">2025</span><span class="op">)</span><span class="op">}</span><span class="op">)</span> <span class="co"># \dontrun{}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
