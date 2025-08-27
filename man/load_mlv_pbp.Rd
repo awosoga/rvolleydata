@@ -32,5 +32,5 @@ A data frame containing the play-by-play data for the specified seasons.\tabular
 Load cleaned mlv points log data form the volleydata repository.
 }
 \examples{
-\dontrun{try({load_mlv_pbp(2024)})}
+\donttest{try({load_mlv_pbp(2024)})}
 }

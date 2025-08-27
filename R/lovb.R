@@ -100,7 +100,7 @@ load_lovb_officials <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' \dontrun{try({load_lovb_pbp(2025)})}
+#' \donttest{try({load_lovb_pbp(2025)})}
 
 load_lovb_pbp <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -233,7 +233,7 @@ load_lovb_team_staff <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' \dontrun{try({load_lovb_events_log(2025)})}
+#' \donttest{try({load_lovb_events_log(2025)})}
 
 load_lovb_events_log <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))

@@ -26,5 +26,5 @@ A data frame containing the events log data for the specified seasons.\tabular{l
 Load cleaned lovb events log data from the volleydata repository.
 }
 \examples{
-\dontrun{try({load_lovb_events_log(2025)})}
+\donttest{try({load_lovb_events_log(2025)})}
 }

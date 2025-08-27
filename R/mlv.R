@@ -100,7 +100,7 @@ load_mlv_officials <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' \dontrun{try({load_mlv_pbp(2024)})}
+#' \donttest{try({load_mlv_pbp(2024)})}
 
 load_mlv_pbp <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -275,7 +275,7 @@ load_mlv_team_staff <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' \dontrun{try({load_mlv_events_log(2024)})}
+#' \donttest{try({load_mlv_events_log(2024)})}
 
 load_mlv_events_log <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))

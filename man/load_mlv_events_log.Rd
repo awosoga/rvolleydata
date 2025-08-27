@@ -69,5 +69,5 @@ A data frame containing the events log data for the specified seasons.\tabular{l
 Load cleaned mlv events log data from the volleydata repository.
 }
 \examples{
-\dontrun{try({load_mlv_events_log(2024)})}
+\donttest{try({load_mlv_events_log(2024)})}
 }
