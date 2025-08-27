@@ -59,5 +59,5 @@ A data frame containing play-by-play data for the specified seasons.\tabular{ll}
 Load cleaned aupvb pbp data from the volleydata repository.
 }
 \examples{
-try({load_aupvb_pbp(2024)})
+\donttest{try({load_aupvb_pbp(2024)})}
 }

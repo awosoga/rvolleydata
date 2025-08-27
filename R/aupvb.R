@@ -232,7 +232,7 @@ load_aupvb_leaderboards <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' try({load_aupvb_pbp(2024)})
+#' \donttest{try({load_aupvb_pbp(2024)})}
 
 load_aupvb_pbp <- function(seasons = NULL) {
   current_year <- as.integer(format(Sys.Date(), "%Y"))
@@ -246,7 +246,7 @@ load_aupvb_pbp <- function(seasons = NULL) {
   #   seasons <- utils::head(seasons, -1)
   # }
 
-  pbp <- data.frame()
+  pbp <- tibble::tibble()
 
   for(season in seasons) {
     temp <- readr::read_csv(
