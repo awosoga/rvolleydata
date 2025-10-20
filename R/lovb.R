@@ -161,6 +161,69 @@ load_lovb_pbp <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
+#' try({load_lovb_player_info(2025)})
+
+load_lovb_player_info <- function(seasons = NULL) {
+  current_year <- as.integer(format(Sys.Date(), "%Y"))
+
+  if (is.null(seasons)) {
+    seasons <- 2025:current_year
+  } else {
+    validate_seasons(seasons, 2025)
+  }
+
+  player_info <- readr::read_csv(
+    "https://github.com/awosoga/volleydata/releases/download/lovb-player-info/lovb_player_info.csv"
+  )
+  player_info <- player_info |> dplyr::filter(season %in% seasons)
+  return(player_info)
+}
+
+
+#' Load cleaned lovb player boxscore data from the volleydata repository.
+#'
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
+#'
+#' @returns A data frame containing the player boxscore data for the specified seasons.
+#' |Column Name              |  Type |
+#' |-------------------------|:------|
+#' |match_id                 |  int  |
+#' |season                   |  int  |
+#' |match_datetime           |  chr  |
+#' |team_involved            |  chr  |
+#' |team_name                |  chr  |
+#' |player_lastname          |  chr  |
+#' |player_firstname         |  chr  |
+#' |sets_played              |  int  |
+#' |is_captain               |  lgl  |
+#' |number                   |  chr  |
+#' |libero                   |  int  |
+#' |set_number               |  int  |
+#' |serves                   |  int  |
+#' |serve_errors             |  int  |
+#' |serve_aces               |  int  |
+#' |serve_efficiency         |  dbl  |
+#' |attack_attempts          |  int  |
+#' |attack_errors            |  int  |
+#' |attack_kills             |  int  |
+#' |attack_success_ratio     |  dbl  |
+#' |attack_efficiency        |  dbl  |
+#' |receptions               |  int  |
+#' |reception_errors         |  int  |
+#' |positive_reception_ratio |  dbl  |
+#' |perfect_reception_ratio  |  dbl  |
+#' |block_points             |  int  |
+#' |block_touches            |  int  |
+#' |earned_points            |  int  |
+#' |net_points               |  int  |
+#' |assists                  |  int  |
+#' |successful_digs          |  int  |
+#' |id                       |  chr  |
+#' |spike_hp                 |  int  |
+#' |points                   |  int  |
+#' @export
+#'
+#' @examples
 #' try({load_lovb_player_boxscore(2025)})
 
 load_lovb_player_boxscore <- function(seasons = NULL) {
@@ -177,6 +240,62 @@ load_lovb_player_boxscore <- function(seasons = NULL) {
   )
   player_boxscore <- player_boxscore |> dplyr::filter(season %in% seasons)
   return(player_boxscore)
+}
+
+#' Load cleaned lovb team boxscore data from the volleydata repository.
+#'
+#' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
+#'
+#' @returns A data frame containing team boxscore data for the specified seasons.
+#' |Column Name              |  Type |
+#' |-------------------------|:------|
+#' |match_id                 |  int  |
+#' |season                   |  int  |
+#' |match_datetime           |  chr  |
+#' |team_involved            |  chr  |
+#' |team_name                |  chr  |
+#' |set_number               |  int  |
+#' |serves                   |  int  |
+#' |serve_errors             |  int  |
+#' |serve_aces               |  int  |
+#' |serve_efficiency         |  dbl  |
+#' |attack_attempts          |  int  |
+#' |attack_errors            |  int  |
+#' |attack_kills             |  int  |
+#' |attack_success_ratio     |  dbl  |
+#' |attack_efficiency        |  dbl  |
+#' |receptions               |  int  |
+#' |reception_errors         |  int  |
+#' |positive_reception_ratio |  dbl  |
+#' |perfect_reception_ratio  |  dbl  |
+#' |block_points             |  int  |
+#' |block_touches            |  int  |
+#' |earned_points            |  int  |
+#' |net_points               |  int  |
+#' |assists                  |  int  |
+#' |successful_digs          |  int  |
+#' |id                       |  chr  |
+#' |spike_hp                 |  int  |
+#' |points                   |  int  |
+#' @export
+#'
+#' @examples
+#' try({load_lovb_team_boxscore(2025)})
+
+load_lovb_team_boxscore <- function(seasons = NULL) {
+  current_year <- as.integer(format(Sys.Date(), "%Y"))
+
+  if (is.null(seasons)) {
+    seasons <- 2025:current_year
+  } else {
+    validate_seasons(seasons, 2025)
+  }
+
+  team_boxscore <- readr::read_csv(
+    "https://github.com/awosoga/volleydata/releases/download/lovb-team-boxscore/lovb_team_boxscore.csv"
+  )
+  team_boxscore <- team_boxscore |> dplyr::filter(season %in% seasons)
+  return(team_boxscore)
 }
 
 #' Load cleaned lovb team staff data from the volleydata repository.

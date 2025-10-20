@@ -10,35 +10,42 @@ load_mlv_player_boxscore(seasons = NULL)
 \item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.}
 }
 \value{
-A data frame containing the player boxscore data for the specified seasons.\tabular{ll}{
+A data frame containing player boxscore data for the specified seasons.\tabular{ll}{
    Column Name \tab Type \cr
-   match_id \tab dbl \cr
-   season \tab dbl \cr
+   match_id \tab int \cr
+   season \tab int \cr
    match_datetime \tab chr \cr
-   set \tab dbl \cr
-   set_start_time \tab chr \cr
-   set_end_time \tab chr \cr
-   set_duration \tab dbl \cr
-   set_home_score \tab dbl \cr
-   set_away_score \tab dbl \cr
-   event_type \tab chr \cr
-   event_time \tab chr \cr
-   libero_enters \tab lgl \cr
    team_involved \tab chr \cr
-   libero_jersey_number \tab dbl \cr
-   libero_subsitute_jersey_number \tab dbl \cr
-   rally_start_time \tab chr \cr
-   rally_end_time \tab chr \cr
-   point_team \tab chr \cr
-   call_approved \tab lgl \cr
-   player_in_jersey_number \tab dbl \cr
-   player_out_jersey_number \tab dbl \cr
-   challenge_reason \tab chr \cr
-   challenge_method \tab chr \cr
-   challenge_response \tab chr \cr
-   challenge_result \tab chr \cr
-   home_score_after_challenge \tab dbl \cr
-   away_score_after_challenge \tab dbl \cr
+   team_name \tab chr \cr
+   player_lastname \tab chr \cr
+   player_firstname \tab chr \cr
+   sets_played \tab int \cr
+   is_captain \tab lgl \cr
+   number \tab chr \cr
+   libero \tab int \cr
+   set_number \tab int \cr
+   serves \tab int \cr
+   serve_errors \tab int \cr
+   serve_aces \tab int \cr
+   serve_efficiency \tab dbl \cr
+   attack_attempts \tab int \cr
+   attack_errors \tab int \cr
+   attack_kills \tab int \cr
+   attack_success_ratio \tab dbl \cr
+   attack_efficiency \tab dbl \cr
+   receptions \tab int \cr
+   reception_errors \tab int \cr
+   positive_reception_ratio \tab dbl \cr
+   perfect_reception_ratio \tab dbl \cr
+   block_points \tab int \cr
+   block_touches \tab int \cr
+   earned_points \tab int \cr
+   net_points \tab int \cr
+   assists \tab int \cr
+   successful_digs \tab int \cr
+   id \tab chr \cr
+   spike_hp \tab int \cr
+   points \tab int \cr
 }
 }
 \description{

@@ -34,10 +34,10 @@ testthat::test_that("load_lovb_pbp() works", {
   testthat::expect_true(nrow(pbp_data_2025) != 0)
 })
 
-testthat::test_that("load_lovb_player_boxscore() works", {
-  player_boxscore_data_2025 <- load_lovb_player_boxscore(2025)
-  testthat::expect_type(player_boxscore_data_2025, "list")
-  testthat::expect_true(nrow(player_boxscore_data_2025) != 0)
+testthat::test_that("load_lovb_player_info() works", {
+  player_info_data_2025 <- load_lovb_player_info(2025)
+  testthat::expect_type(player_info_data_2025, "list")
+  testthat::expect_true(nrow(player_info_data_2025) != 0)
 })
 
 testthat::test_that("load_lovb_team_staff() works", {
@@ -70,10 +70,10 @@ testthat::test_that("load_mlv_pbp() works", {
   testthat::expect_true(nrow(pbp_data_2025) != 0)
 })
 
-testthat::test_that("load_mlv_player_boxscore() works", {
-  player_boxscore_data_2025 <- load_mlv_player_boxscore(2025)
-  testthat::expect_type(player_boxscore_data_2025, "list")
-  testthat::expect_true(nrow(player_boxscore_data_2025) != 0)
+testthat::test_that("load_mlv_player_info() works", {
+  player_info_data_2025 <- load_mlv_player_info(2025)
+  testthat::expect_type(player_info_data_2025, "list")
+  testthat::expect_true(nrow(player_info_data_2025) != 0)
 })
 
 testthat::test_that("load_mlv_team_staff() works", {

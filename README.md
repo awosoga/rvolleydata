@@ -1,7 +1,12 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rvolleydata <a href="https://awosoga.github.io/rvolleydata/"><img src="man/figures/logo.png" align="right" height="120" alt="rvolleydata website" /></a>
+# rvolleydata <a href="https://awosoga.github.io/rvolleydata/"><img src="man/figures/logo.svg" alt="rvolleydata website" align="right" height="139"/></a>
 
 <!-- badges: start -->
 
@@ -17,7 +22,7 @@ The goal of `rvolleydata` is to help people access clean and tidy data
 from [League One Volleyball Pro (LOVB)](https://www.lovb.com/),
 [Athletes Unlimited Pro Volleyball
 (AUPVB)](https://auprosports.com/volleyball/), and [Major League
-Volleyball(MLV)](https://provolleyball.com/) leagues.
+Volleyball (MLV)](https://provolleyball.com/) leagues.
 
 ## Installations
 
@@ -42,3 +47,8 @@ devtools::install_github("awosoga/rvolleydata")
 Please refer to the [package
 vignette](https://awosoga.github.io/rvolleydata/articles/rvolleydata-how-to-use)
 for more information on how to use this library.
+
+## Acknowledgement
+
+A big thanks to [Rebecca Lai](https://www.rebeccalai.net) for the
+awesome logo design!
