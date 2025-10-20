@@ -121,7 +121,7 @@ glimpse(load_lovb_events_log)
 
 ### Player Boxscores
 
-Use `load_lovb_player_boxscores` to access League One Volleyball Pro (LOVB) player boxscore data.
+Use `load_lovb_player_boxscore` to access League One Volleyball Pro (LOVB) player boxscore data.
 
 ```{r player_boxscores}
 load_lovb_player_boxscores <- load_lovb_player_boxscore(2025)
@@ -130,7 +130,7 @@ glimpse(load_lovb_player_boxscores)
 
 ### Team Boxscores
 
-Use `load_lovb_team_boxscores` to access League One Volleyball Pro (LOVB) team boxscore data.
+Use `load_lovb_team_boxscore` to access League One Volleyball Pro (LOVB) team boxscore data.
 
 ```{r team_boxscores}
 load_lovb_team_boxscores <- load_lovb_team_boxscore(2025)
