@@ -50,12 +50,46 @@
 
 
 <dl><dt id="arg-seasons">seasons<a class="anchor" aria-label="anchor" href="#arg-seasons"></a></dt>
-<dd><p>An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.</p></dd>
+<dd><p>An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.</p>
+<p>|————————-|:——|
+|match_id                 |  int  |
+|season                   |  int  |
+|match_datetime           |  chr  |
+|team_involved            |  chr  |
+|team_name                |  chr  |
+|player_name              |  chr  |
+|last_name                |  chr  |
+|first_name               |  chr  |
+|sets_played              |  int  |
+|player_number            |  chr  |
+|is_captain               |  lgl  |
+|is_libero                |  int  |
+|set_starting_position    |  chr  |
+|set_number               |  int  |
+|serves                   |  int  |
+|serve_errors             |  int  |
+|serve_aces               |  int  |
+|serve_efficiency         |  dbl  |
+|attack_attempts          |  int  |
+|attack_errors            |  int  |
+|attack_kills             |  int  |
+|attack_success_ratio     |  dbl  |
+|attack_efficiency        |  dbl  |
+|receptions               |  int  |
+|reception_errors         |  int  |
+|positive_reception_ratio |  dbl  |
+|perfect_reception_ratio  |  dbl  |
+|block_points             |  int  |
+|block_touches            |  int  |
+|earned_points            |  int  |
+|net_points               |  int  |
+|assists                  |  int  |
+|successful_digs          |  int  |
+|id                       |  chr  |
+|spike_hp                 |  int  |
+|points                   |  int  |</p></dd>
 
 </dl></div>
-    <div class="section level2">
-    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A data frame containing the player boxscore data for the specified seasons.</p><table class="table table"><tr><td>Column Name</td><td>Type</td></tr><tr><td>match_id</td><td>dbl</td></tr><tr><td>season</td><td>dbl</td></tr><tr><td>match_datetime</td><td>chr</td></tr><tr><td>player_id</td><td>dbl</td></tr><tr><td>player_name</td><td>chr</td></tr><tr><td>first_name</td><td>chr</td></tr><tr><td>last_name</td><td>chr</td></tr><tr><td>jersey_number</td><td>dbl</td></tr><tr><td>primary_position</td><td>dbl</td></tr><tr><td>roster_status</td><td>chr</td></tr><tr><td>is_foreign</td><td>lgl</td></tr><tr><td>is_confederation</td><td>lgl</td></tr><tr><td>is_captain</td><td>lgl</td></tr><tr><td>is_libero</td><td>lgl</td></tr><tr><td>set_1_is_starter</td><td>lgl</td></tr><tr><td>set_1_starting_position</td><td>dbl</td></tr><tr><td>set_2_is_starter</td><td>lgl</td></tr><tr><td>set_2_starting_position</td><td>dbl</td></tr><tr><td>set_3_is_starter</td><td>lgl</td></tr><tr><td>set_3_starting_position</td><td>dbl</td></tr><tr><td>set_4_is_starter</td><td>lgl</td></tr><tr><td>set_4_starting_position</td><td>dbl</td></tr><tr><td>set_5_is_starter</td><td>lgl</td></tr><tr><td>set_5_starting_position</td><td>dbl</td></tr><tr><td>team_name</td><td>chr</td></tr><tr><td>team_short_name</td><td>chr</td></tr><tr><td>team_code</td><td>chr</td></tr><tr><td>team_color</td><td>chr</td></tr></table></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
