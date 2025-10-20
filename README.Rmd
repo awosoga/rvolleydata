@@ -16,8 +16,7 @@ knitr::opts_chunk$set(
 # rvolleydata <a href="https://awosoga.github.io/rvolleydata/"><img src="man/figures/logo.svg" alt="rvolleydata website" align="right" height="139"/></a>
 
 <!-- badges: start -->
-
-[![R-CMD-check](https://github.com/awosoga/rvolleydata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/awosoga/rvolleydata/actions/workflows/R-CMD-check.yaml) [![Version-Number](https://img.shields.io/github/r-package/v/awosoga/rvolleydata?label=rvolleydata)](https://github.com/awosoga/rvolleydata) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![downloads](https://cranlogs.r-pkg.org/badges/grand-total/rvolleydata)](https://cran.r-project.org/package=rvolleydata) [![R-CMD-check](https://github.com/awosoga/rvolleydata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/awosoga/rvolleydata/actions/workflows/R-CMD-check.yaml) [![Version-Number](https://img.shields.io/github/r-package/v/awosoga/rvolleydata?label=rvolleydata)](https://github.com/awosoga/rvolleydata) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 
 <!-- badges: end -->
 

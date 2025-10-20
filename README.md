@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![downloads](https://cranlogs.r-pkg.org/badges/grand-total/rvolleydata)](https://cran.r-project.org/package=rvolleydata)
 [![R-CMD-check](https://github.com/awosoga/rvolleydata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/awosoga/rvolleydata/actions/workflows/R-CMD-check.yaml)
 [![Version-Number](https://img.shields.io/github/r-package/v/awosoga/rvolleydata?label=rvolleydata)](https://github.com/awosoga/rvolleydata)
 [![Lifecycle:
