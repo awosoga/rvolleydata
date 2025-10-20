@@ -7,40 +7,45 @@
 load_lovb_player_info(seasons = NULL)
 }
 \arguments{
-\item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.}
-}
-\value{
-A data frame containing the player boxscore data for the specified seasons.\tabular{ll}{
-   Column Name \tab Type \cr
-   match_id \tab dbl \cr
-   season \tab dbl \cr
-   match_datetime \tab chr \cr
-   player_id \tab dbl \cr
-   player_name \tab chr \cr
-   first_name \tab chr \cr
-   last_name \tab chr \cr
-   jersey_number \tab dbl \cr
-   primary_position \tab dbl \cr
-   roster_status \tab chr \cr
-   is_foreign \tab lgl \cr
-   is_confederation \tab lgl \cr
-   is_captain \tab lgl \cr
-   is_libero \tab lgl \cr
-   set_1_is_starter \tab lgl \cr
-   set_1_starting_position \tab dbl \cr
-   set_2_is_starter \tab lgl \cr
-   set_2_starting_position \tab dbl \cr
-   set_3_is_starter \tab lgl \cr
-   set_3_starting_position \tab dbl \cr
-   set_4_is_starter \tab lgl \cr
-   set_4_starting_position \tab dbl \cr
-   set_5_is_starter \tab lgl \cr
-   set_5_starting_position \tab dbl \cr
-   team_name \tab chr \cr
-   team_short_name \tab chr \cr
-   team_code \tab chr \cr
-   team_color \tab chr \cr
-}
+\item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
+
+|-------------------------|:------|
+|match_id                 |  int  |
+|season                   |  int  |
+|match_datetime           |  chr  |
+|team_involved            |  chr  |
+|team_name                |  chr  |
+|player_name              |  chr  |
+|last_name                |  chr  |
+|first_name               |  chr  |
+|sets_played              |  int  |
+|player_number            |  chr  |
+|is_captain               |  lgl  |
+|is_libero                |  int  |
+|set_starting_position    |  chr  |
+|set_number               |  int  |
+|serves                   |  int  |
+|serve_errors             |  int  |
+|serve_aces               |  int  |
+|serve_efficiency         |  dbl  |
+|attack_attempts          |  int  |
+|attack_errors            |  int  |
+|attack_kills             |  int  |
+|attack_success_ratio     |  dbl  |
+|attack_efficiency        |  dbl  |
+|receptions               |  int  |
+|reception_errors         |  int  |
+|positive_reception_ratio |  dbl  |
+|perfect_reception_ratio  |  dbl  |
+|block_points             |  int  |
+|block_touches            |  int  |
+|earned_points            |  int  |
+|net_points               |  int  |
+|assists                  |  int  |
+|successful_digs          |  int  |
+|id                       |  chr  |
+|spike_hp                 |  int  |
+|points                   |  int  |}
 }
 \description{
 Load cleaned lovb player boxscore data from the volleydata repository.

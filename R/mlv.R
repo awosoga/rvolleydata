@@ -185,18 +185,19 @@ load_mlv_player_info <- function(seasons = NULL) {
 #'
 #' @returns A data frame containing player boxscore data for the specified seasons.
 #' |Column Name              |  Type |
-#' |-------------------------|:------|
 #' |match_id                 |  int  |
 #' |season                   |  int  |
 #' |match_datetime           |  chr  |
 #' |team_involved            |  chr  |
 #' |team_name                |  chr  |
-#' |player_lastname          |  chr  |
-#' |player_firstname         |  chr  |
+#' |player_name              |  chr  |
+#' |last_name                |  chr  |
+#' |first_name               |  chr  |
 #' |sets_played              |  int  |
+#' |player_number            |  chr  |
 #' |is_captain               |  lgl  |
-#' |number                   |  chr  |
-#' |libero                   |  int  |
+#' |is_libero                |  int  |
+#' |set_starting_position    |  chr  |
 #' |set_number               |  int  |
 #' |serves                   |  int  |
 #' |serve_errors             |  int  |

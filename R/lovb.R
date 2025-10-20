@@ -127,37 +127,43 @@ load_lovb_pbp <- function(seasons = NULL) {
 #'
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
-#' @returns A data frame containing the player boxscore data for the specified seasons.
-#' |Column Name                      |  Type  |
-#' |:------------------------------- |:-------|
-#' |match_id                         |  dbl   |
-#' |season                           |  dbl   |
-#' |match_datetime                   |  chr   |
-#' |player_id                        |  dbl   |
-#' |player_name                      |  chr   |
-#' |first_name                       |  chr   |
-#' |last_name                        |  chr   |
-#' |jersey_number                    |  dbl   |
-#' |primary_position                 |  dbl   |
-#' |roster_status                    |  chr   |
-#' |is_foreign                       |  lgl   |
-#' |is_confederation                 |  lgl   |
-#' |is_captain                       |  lgl   |
-#' |is_libero                        |  lgl   |
-#' |set_1_is_starter                 |  lgl   |
-#' |set_1_starting_position          |  dbl   |
-#' |set_2_is_starter                 |  lgl   |
-#' |set_2_starting_position          |  dbl   |
-#' |set_3_is_starter                 |  lgl   |
-#' |set_3_starting_position          |  dbl   |
-#' |set_4_is_starter                 |  lgl   |
-#' |set_4_starting_position          |  dbl   |
-#' |set_5_is_starter                 |  lgl   |
-#' |set_5_starting_position          |  dbl   |
-#' |team_name                        |  chr   |
-#' |team_short_name                  |  chr   |
-#' |team_code                        |  chr   |
-#' |team_color                       |  chr   |
+#' |-------------------------|:------|
+#' |match_id                 |  int  |
+#' |season                   |  int  |
+#' |match_datetime           |  chr  |
+#' |team_involved            |  chr  |
+#' |team_name                |  chr  |
+#' |player_name              |  chr  |
+#' |last_name                |  chr  |
+#' |first_name               |  chr  |
+#' |sets_played              |  int  |
+#' |player_number            |  chr  |
+#' |is_captain               |  lgl  |
+#' |is_libero                |  int  |
+#' |set_starting_position    |  chr  |
+#' |set_number               |  int  |
+#' |serves                   |  int  |
+#' |serve_errors             |  int  |
+#' |serve_aces               |  int  |
+#' |serve_efficiency         |  dbl  |
+#' |attack_attempts          |  int  |
+#' |attack_errors            |  int  |
+#' |attack_kills             |  int  |
+#' |attack_success_ratio     |  dbl  |
+#' |attack_efficiency        |  dbl  |
+#' |receptions               |  int  |
+#' |reception_errors         |  int  |
+#' |positive_reception_ratio |  dbl  |
+#' |perfect_reception_ratio  |  dbl  |
+#' |block_points             |  int  |
+#' |block_touches            |  int  |
+#' |earned_points            |  int  |
+#' |net_points               |  int  |
+#' |assists                  |  int  |
+#' |successful_digs          |  int  |
+#' |id                       |  chr  |
+#' |spike_hp                 |  int  |
+#' |points                   |  int  |
 #' @export
 #'
 #' @examples
