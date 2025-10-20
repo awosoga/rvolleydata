@@ -92,7 +92,7 @@ load_lovb_officials <- load_lovb_officials(2025)
 glimpse(load_lovb_officials)
 ```
 
-### Player Info
+### Player Information
 
 Use `load_lovb_player_info` to access League One Volleyball Pro (LOVB) player information.
 
