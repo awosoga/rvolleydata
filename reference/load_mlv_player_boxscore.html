@@ -55,45 +55,7 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A data frame containing player boxscore data for the specified seasons.
-|Column Name              |  Type |
-|match_id                 |  int  |
-|season                   |  int  |
-|match_datetime           |  chr  |
-|team_involved            |  chr  |
-|team_name                |  chr  |
-|player_name              |  chr  |
-|last_name                |  chr  |
-|first_name               |  chr  |
-|sets_played              |  int  |
-|player_number            |  chr  |
-|is_captain               |  lgl  |
-|is_libero                |  int  |
-|set_starting_position    |  chr  |
-|set_number               |  int  |
-|serves                   |  int  |
-|serve_errors             |  int  |
-|serve_aces               |  int  |
-|serve_efficiency         |  dbl  |
-|attack_attempts          |  int  |
-|attack_errors            |  int  |
-|attack_kills             |  int  |
-|attack_success_ratio     |  dbl  |
-|attack_efficiency        |  dbl  |
-|receptions               |  int  |
-|reception_errors         |  int  |
-|positive_reception_ratio |  dbl  |
-|perfect_reception_ratio  |  dbl  |
-|block_points             |  int  |
-|block_touches            |  int  |
-|earned_points            |  int  |
-|net_points               |  int  |
-|assists                  |  int  |
-|successful_digs          |  int  |
-|id                       |  chr  |
-|spike_hp                 |  int  |
-|points                   |  int  |</p>
-    </div>
+    <p>A data frame containing player boxscore data for the specified seasons.</p><table class="table table"><tr><td>Column Name</td><td>Type</td></tr><tr><td>match_id</td><td>int</td></tr><tr><td>season</td><td>int</td></tr><tr><td>match_datetime</td><td>chr</td></tr><tr><td>team_involved</td><td>chr</td></tr><tr><td>team_name</td><td>chr</td></tr><tr><td>player_name</td><td>chr</td></tr><tr><td>last_name</td><td>chr</td></tr><tr><td>first_name</td><td>chr</td></tr><tr><td>sets_played</td><td>int</td></tr><tr><td>player_number</td><td>chr</td></tr><tr><td>is_captain</td><td>lgl</td></tr><tr><td>is_libero</td><td>int</td></tr><tr><td>set_starting_position</td><td>chr</td></tr><tr><td>set_number</td><td>int</td></tr><tr><td>serves</td><td>int</td></tr><tr><td>serve_errors</td><td>int</td></tr><tr><td>serve_aces</td><td>int</td></tr><tr><td>serve_efficiency</td><td>dbl</td></tr><tr><td>attack_attempts</td><td>int</td></tr><tr><td>attack_errors</td><td>int</td></tr><tr><td>attack_kills</td><td>int</td></tr><tr><td>attack_success_ratio</td><td>dbl</td></tr><tr><td>attack_efficiency</td><td>dbl</td></tr><tr><td>receptions</td><td>int</td></tr><tr><td>reception_errors</td><td>int</td></tr><tr><td>positive_reception_ratio</td><td>dbl</td></tr><tr><td>perfect_reception_ratio</td><td>dbl</td></tr><tr><td>block_points</td><td>int</td></tr><tr><td>block_touches</td><td>int</td></tr><tr><td>earned_points</td><td>int</td></tr><tr><td>net_points</td><td>int</td></tr><tr><td>assists</td><td>int</td></tr><tr><td>successful_digs</td><td>int</td></tr><tr><td>id</td><td>chr</td></tr><tr><td>spike_hp</td><td>int</td></tr><tr><td>points</td><td>int</td></tr></table></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
@@ -101,8 +63,8 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">16229</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">36</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Delimiter:</span> ","</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">chr</span>   (6): team_involved, team_name, player_name, first_name, last_name, id</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">dbl</span>  (27): match_id, season, sets_played, player_number, set_number, set_sta...</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">chr</span>   (7): team_involved, team_name, player_name, first_name, last_name, set...</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">dbl</span>  (26): match_id, season, sets_played, player_number, set_number, serves,...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">lgl</span>   (2): is_captain, is_libero</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB;">dttm</span>  (1): match_datetime</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
@@ -124,7 +86,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 6,871 more rows</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 30 more variables: first_name &lt;chr&gt;, last_name &lt;chr&gt;, sets_played &lt;dbl&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   player_number &lt;dbl&gt;, is_captain &lt;lgl&gt;, is_libero &lt;lgl&gt;, set_number &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   set_starting_position &lt;dbl&gt;, serves &lt;dbl&gt;, serve_errors &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   set_starting_position &lt;chr&gt;, serves &lt;dbl&gt;, serve_errors &lt;dbl&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   serve_aces &lt;dbl&gt;, serve_efficiency &lt;dbl&gt;, attack_attempts &lt;dbl&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   attack_errors &lt;dbl&gt;, attack_kills &lt;dbl&gt;, attack_success_ratio &lt;dbl&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   attack_efficiency &lt;dbl&gt;, receptions &lt;dbl&gt;, reception_errors &lt;dbl&gt;, …</span></span>
