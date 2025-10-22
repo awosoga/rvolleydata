@@ -1,3 +1,8 @@
+# rvolleydata 1.1.1
+## Patches
+* Correct the documentation for different functions
+* Fixed the `load_mlv_schedule()` function
+
 # rvolleydata 1.1.0
 ## Minor changes
 * Added `load_xxx_player_boxscore()` and `load_xxx_team_boxscore()` functions for
