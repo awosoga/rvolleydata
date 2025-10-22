@@ -15,11 +15,54 @@ A data frame containing the events log data for the specified seasons.\tabular{l
    match_id \tab int \cr
    season \tab int \cr
    match_datetime \tab string \cr
-   team_name \tab string \cr
+   set \tab int \cr
+   set_start_time \tab string \cr
+   set_end_time \tab string \cr
+   set_duration \tab int \cr
+   set_final_home_score \tab int \cr
+   set_final_away_score \tab int \cr
+   event_type \tab string \cr
+   event_time \tab string \cr
+   libero_enters \tab bool \cr
+   team_involved \tab string \cr
+   libero_jersey_number \tab int \cr
+   libero_substitute_jersey_number \tab int \cr
+   rally_start_time \tab string \cr
+   rally_end_time \tab string \cr
+   rally_point_winner \tab string \cr
+   substitute_in_jersey_number \tab int \cr
+   substitute_out_jersey_number \tab int \cr
+   challenge_approved \tab string \cr
+   challenge_reason \tab string \cr
+   challenge_method \tab string \cr
+   challenge_response \tab string \cr
+   challenge_at_home_score \tab float \cr
+   challenge_at_away_score \tab float \cr
+   challenge_score_change \tab string \cr
+   serving_team \tab string \cr
+   current_home_score \tab float \cr
+   current_away_score \tab float \cr
+   home_team_p1 \tab float \cr
+   home_team_p2 \tab float \cr
+   home_team_p3 \tab float \cr
+   home_team_p4 \tab float \cr
+   home_team_p5 \tab float \cr
+   home_team_p6 \tab float \cr
+   away_team_p1 \tab float \cr
+   away_team_p2 \tab float \cr
+   away_team_p3 \tab float \cr
+   away_team_p4 \tab float \cr
+   away_team_p5 \tab float \cr
+   away_team_p6 \tab float \cr
+   verified_time \tab string \cr
+   verified_method \tab string \cr
+   sanction_type \tab string \cr
+   sanction_remark \tab float \cr
+   sanction_staff_role \tab string \cr
+   staff_first_name \tab string \cr
+   staff_last_name \tab string \cr
    staff_type \tab string \cr
-   full_name \tab string \cr
-   first_name \tab string \cr
-   last_name \tab string \cr
+   is_exceptional \tab string \cr
 }
 }
 \description{

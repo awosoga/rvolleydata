@@ -2,53 +2,45 @@
 % Please edit documentation in R/lovb.R
 \name{load_lovb_player_info}
 \alias{load_lovb_player_info}
-\title{Load cleaned lovb player boxscore data from the volleydata repository.}
+\title{Load cleaned lovb player info data from the volleydata repository.}
 \usage{
 load_lovb_player_info(seasons = NULL)
 }
 \arguments{
-\item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
-
-|-------------------------|:------|
-|match_id                 |  int  |
-|season                   |  int  |
-|match_datetime           |  chr  |
-|team_involved            |  chr  |
-|team_name                |  chr  |
-|player_name              |  chr  |
-|last_name                |  chr  |
-|first_name               |  chr  |
-|sets_played              |  int  |
-|player_number            |  chr  |
-|is_captain               |  lgl  |
-|is_libero                |  int  |
-|set_starting_position    |  chr  |
-|set_number               |  int  |
-|serves                   |  int  |
-|serve_errors             |  int  |
-|serve_aces               |  int  |
-|serve_efficiency         |  dbl  |
-|attack_attempts          |  int  |
-|attack_errors            |  int  |
-|attack_kills             |  int  |
-|attack_success_ratio     |  dbl  |
-|attack_efficiency        |  dbl  |
-|receptions               |  int  |
-|reception_errors         |  int  |
-|positive_reception_ratio |  dbl  |
-|perfect_reception_ratio  |  dbl  |
-|block_points             |  int  |
-|block_touches            |  int  |
-|earned_points            |  int  |
-|net_points               |  int  |
-|assists                  |  int  |
-|successful_digs          |  int  |
-|id                       |  chr  |
-|spike_hp                 |  int  |
-|points                   |  int  |}
+\item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.\tabular{ll}{
+   Column Name \tab Type \cr
+   match_id \tab int \cr
+   season \tab int \cr
+   match_datetime \tab chr \cr
+   player_id \tab int \cr
+   player_name \tab chr \cr
+   first_name \tab chr \cr
+   last_name \tab chr \cr
+   jersey_number \tab int \cr
+   primary_position \tab int \cr
+   roster_status \tab chr \cr
+   is_foreign \tab lgl \cr
+   is_confederation \tab lgl \cr
+   is_captain \tab lgl \cr
+   is_libero \tab lgl \cr
+   set_1_is_starter \tab lgl \cr
+   set_1_starting_position \tab int \cr
+   set_2_is_starter \tab lgl \cr
+   set_2_starting_position \tab int \cr
+   set_3_is_starter \tab lgl \cr
+   set_3_starting_position \tab int \cr
+   set_4_is_starter \tab lgl \cr
+   set_4_starting_position \tab int \cr
+   set_5_is_starter \tab lgl \cr
+   set_5_starting_position \tab int \cr
+   team_name \tab chr \cr
+   team_short_name \tab chr \cr
+   team_code \tab chr \cr
+   team_color \tab chr \cr
+}}
 }
 \description{
-Load cleaned lovb player boxscore data from the volleydata repository.
+Load cleaned lovb player info data from the volleydata repository.
 }
 \examples{
 try({load_lovb_player_info(2025)})

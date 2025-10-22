@@ -1,5 +1,5 @@
 source("R/utils.R")
-utils::globalVariables(c("season", "player_info"))
+utils::globalVariables(c("season"))
 
 #' Load cleaned aupvb player info data from the volleydata repository
 #'

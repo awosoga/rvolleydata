@@ -12,33 +12,34 @@ load_mlv_player_info(seasons = NULL)
 \value{
 A data frame containing the player info data for the specified seasons.\tabular{ll}{
    Column Name \tab Type \cr
-   match_id \tab dbl \cr
-   season \tab dbl \cr
+   match_id \tab int \cr
+   season \tab int \cr
    match_datetime \tab chr \cr
-   set \tab dbl \cr
-   set_start_time \tab chr \cr
-   set_end_time \tab chr \cr
-   set_duration \tab dbl \cr
-   set_home_score \tab dbl \cr
-   set_away_score \tab dbl \cr
-   event_type \tab chr \cr
-   event_time \tab chr \cr
-   libero_enters \tab lgl \cr
-   team_involved \tab chr \cr
-   libero_jersey_number \tab dbl \cr
-   libero_subsitute_jersey_number \tab dbl \cr
-   rally_start_time \tab chr \cr
-   rally_end_time \tab chr \cr
-   point_team \tab chr \cr
-   call_approved \tab lgl \cr
-   player_in_jersey_number \tab dbl \cr
-   player_out_jersey_number \tab dbl \cr
-   challenge_reason \tab chr \cr
-   challenge_method \tab chr \cr
-   challenge_response \tab chr \cr
-   challenge_result \tab chr \cr
-   home_score_after_challenge \tab dbl \cr
-   away_score_after_challenge \tab dbl \cr
+   player_id \tab int \cr
+   player_name \tab chr \cr
+   first_name \tab chr \cr
+   last_name \tab chr \cr
+   jersey_number \tab int \cr
+   primary_position \tab int \cr
+   roster_status \tab chr \cr
+   is_foreign \tab lgl \cr
+   is_confederation \tab lgl \cr
+   is_captain \tab lgl \cr
+   is_libero \tab lgl \cr
+   set_1_is_starter \tab lgl \cr
+   set_1_starting_position \tab int \cr
+   set_2_is_starter \tab lgl \cr
+   set_2_starting_position \tab int \cr
+   set_3_is_starter \tab lgl \cr
+   set_3_starting_position \tab int \cr
+   set_4_is_starter \tab lgl \cr
+   set_4_starting_position \tab int \cr
+   set_5_is_starter \tab lgl \cr
+   set_5_starting_position \tab int \cr
+   team_name \tab chr \cr
+   team_short_name \tab chr \cr
+   team_code \tab chr \cr
+   team_color \tab chr \cr
 }
 }
 \description{

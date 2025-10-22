@@ -1,5 +1,5 @@
 source("R/utils.R")
-utils::globalVariables(c("season", "player_info"))
+utils::globalVariables(c("season"))
 
 #' Load cleaned mlv schedule data from the volleydata repository.
 #'
@@ -128,35 +128,36 @@ load_mlv_pbp <- function(seasons = NULL) {
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the player info data for the specified seasons.
-#' |Column Name                      |  Type |
-#' |-------------------------------- |:------|
-#' |match_id                         |  dbl  |
-#' |season                           |  dbl  |
-#' |match_datetime                   |  chr  |
-#' |set                              |  dbl  |
-#' |set_start_time                   |  chr  |
-#' |set_end_time                     |  chr  |
-#' |set_duration                     |  dbl  |
-#' |set_home_score                   |  dbl  |
-#' |set_away_score                   |  dbl  |
-#' |event_type                       |  chr  |
-#' |event_time                       |  chr  |
-#' |libero_enters                    |  lgl  |
-#' |team_involved                    |  chr  |
-#' |libero_jersey_number             |  dbl  |
-#' |libero_subsitute_jersey_number   |  dbl  |
-#' |rally_start_time                 |  chr  |
-#' |rally_end_time                   |  chr  |
-#' |point_team                       |  chr  |
-#' |call_approved                    |  lgl  |
-#' |player_in_jersey_number          |  dbl  |
-#' |player_out_jersey_number         |  dbl  |
-#' |challenge_reason                 |  chr  |
-#' |challenge_method                 |  chr  |
-#' |challenge_response               |  chr  |
-#' |challenge_result                 |  chr  |
-#' |home_score_after_challenge       |  dbl  |
-#' |away_score_after_challenge       |  dbl  |
+#' |Column Name               |  Type |
+#' |------------------------- |:------|
+#' |match_id                  |  int  |
+#' |season                    |  int  |
+#' |match_datetime            |  chr  |
+#' |player_id                 |  int  |
+#' |player_name               |  chr  |
+#' |first_name                |  chr  |
+#' |last_name                 |  chr  |
+#' |jersey_number             |  int  |
+#' |primary_position          |  int  |
+#' |roster_status             |  chr  |
+#' |is_foreign                |  lgl  |
+#' |is_confederation          |  lgl  |
+#' |is_captain                |  lgl  |
+#' |is_libero                 |  lgl  |
+#' |set_1_is_starter          |  lgl  |
+#' |set_1_starting_position   |  int  |
+#' |set_2_is_starter          |  lgl  |
+#' |set_2_starting_position   |  int  |
+#' |set_3_is_starter          |  lgl  |
+#' |set_3_starting_position   |  int  |
+#' |set_4_is_starter          |  lgl  |
+#' |set_4_starting_position   |  int  |
+#' |set_5_is_starter          |  lgl  |
+#' |set_5_starting_position   |  int  |
+#' |team_name                 |  chr  |
+#' |team_short_name           |  chr  |
+#' |team_code                 |  chr  |
+#' |team_color                |  chr  |
 #' @export
 #'
 #' @examples
@@ -185,6 +186,7 @@ load_mlv_player_info <- function(seasons = NULL) {
 #'
 #' @returns A data frame containing player boxscore data for the specified seasons.
 #' |Column Name              |  Type |
+#' |------------------------ |:------|
 #' |match_id                 |  int  |
 #' |season                   |  int  |
 #' |match_datetime           |  chr  |

@@ -10,44 +10,45 @@ load_mlv_player_boxscore(seasons = NULL)
 \item{seasons}{An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.}
 }
 \value{
-A data frame containing player boxscore data for the specified seasons.
-|Column Name              |  Type |
-|match_id                 |  int  |
-|season                   |  int  |
-|match_datetime           |  chr  |
-|team_involved            |  chr  |
-|team_name                |  chr  |
-|player_name              |  chr  |
-|last_name                |  chr  |
-|first_name               |  chr  |
-|sets_played              |  int  |
-|player_number            |  chr  |
-|is_captain               |  lgl  |
-|is_libero                |  int  |
-|set_starting_position    |  chr  |
-|set_number               |  int  |
-|serves                   |  int  |
-|serve_errors             |  int  |
-|serve_aces               |  int  |
-|serve_efficiency         |  dbl  |
-|attack_attempts          |  int  |
-|attack_errors            |  int  |
-|attack_kills             |  int  |
-|attack_success_ratio     |  dbl  |
-|attack_efficiency        |  dbl  |
-|receptions               |  int  |
-|reception_errors         |  int  |
-|positive_reception_ratio |  dbl  |
-|perfect_reception_ratio  |  dbl  |
-|block_points             |  int  |
-|block_touches            |  int  |
-|earned_points            |  int  |
-|net_points               |  int  |
-|assists                  |  int  |
-|successful_digs          |  int  |
-|id                       |  chr  |
-|spike_hp                 |  int  |
-|points                   |  int  |
+A data frame containing player boxscore data for the specified seasons.\tabular{ll}{
+   Column Name \tab Type \cr
+   match_id \tab int \cr
+   season \tab int \cr
+   match_datetime \tab chr \cr
+   team_involved \tab chr \cr
+   team_name \tab chr \cr
+   player_name \tab chr \cr
+   last_name \tab chr \cr
+   first_name \tab chr \cr
+   sets_played \tab int \cr
+   player_number \tab chr \cr
+   is_captain \tab lgl \cr
+   is_libero \tab int \cr
+   set_starting_position \tab chr \cr
+   set_number \tab int \cr
+   serves \tab int \cr
+   serve_errors \tab int \cr
+   serve_aces \tab int \cr
+   serve_efficiency \tab dbl \cr
+   attack_attempts \tab int \cr
+   attack_errors \tab int \cr
+   attack_kills \tab int \cr
+   attack_success_ratio \tab dbl \cr
+   attack_efficiency \tab dbl \cr
+   receptions \tab int \cr
+   reception_errors \tab int \cr
+   positive_reception_ratio \tab dbl \cr
+   perfect_reception_ratio \tab dbl \cr
+   block_points \tab int \cr
+   block_touches \tab int \cr
+   earned_points \tab int \cr
+   net_points \tab int \cr
+   assists \tab int \cr
+   successful_digs \tab int \cr
+   id \tab chr \cr
+   spike_hp \tab int \cr
+   points \tab int \cr
+}
 }
 \description{
 Load cleaned mlv player boxscore data from the volleydata repository.
