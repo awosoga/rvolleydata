@@ -1,9 +1,19 @@
 # rvolleydata 2.0.0
 ## Major changes
 
-* Refactored all functions to be more general so that the user can specify the `league`
-as an argument. For example, `load_pbp(league = "mlv", seasons = 2024:2025)`.
-
+* Deprecated all `load_league_xxx()` functions in favor of more general functions:
+  * `load_pbp(league, seasons)`
+  * `load_player_info(league, seasons)`
+  * `load_events_log(league, seasons)`
+  * `load_officials(league, seasons)`
+  * `load_schedule(league, seasons)`
+  * `load_team_staff(league, seasons)`
+  * `load_team_boxscore(league, seasons)`
+  * `load_player_boxscore(league, seasons)`
+  
+## Minor changes
+* Updated AU data to match structure of MLV and LOVB.
+  
 # rvolleydata 1.1.1
 ## Patches
 * Correct the documentation for different functions
