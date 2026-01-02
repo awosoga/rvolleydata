@@ -1,88 +1,68 @@
 source("R/utils.R")
 utils::globalVariables(c("season"))
 
-#' Load cleaned lovb schedule data from the volleydata repository.
+#' Load cleaned schedule data from the volleydata repository.
 #'
+#' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
-#' @returns A data frame containing the schedule data for the specified seasons.
-#' |Column Name                      |   Type  |
+#'                All years must be 2023 or later.
+#'
+#' @returns
+#' |Column Name                      |  Type   |
 #' |:------------------------------- |:--------|
 #' |season                           |  int    |
 #' |date                             |  string |
-#' |round                            |  string |
 #' |home_team                        |  string |
 #' |away_team                        |  string |
 #' |home_team_set_wins               |  int    |
 #' |away_team_set_wins               |  int    |
-#' |match_link                       |  string |
-#' |secondary_link                   |  string |
+#' |result                           |  string |
 #' |match_id                         |  int    |
 #' @export
 #'
 #' @examples
-#' try({load_lovb_schedule(2025)})
+#' try({load_schedule("mlv", 2024)})
 
-load_lovb_schedule <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
+load_schedule <- function(league = NULL, seasons = NULL) {
 
-  if (is.null(seasons)) {
-    seasons <- 2025:current_year
-  } else {
-    validate_seasons(seasons, 2025)
-  }
-
-  schedule <- readr::read_csv(
-    "https://github.com/awosoga/volleydata/releases/download/lovb-schedule/lovb_schedule.csv"
-  )
-  schedule <- schedule |> dplyr::filter(season %in% seasons)
-  return(schedule)
+  return(get_data(league, seasons))
 }
 
-#' Load cleaned lovb officials data from the volleydata repository.
+#' Load cleaned officials data from the volleydata repository.
 #'
+#' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
-#' @returns A data frame containing the officials data for the specified seasons.
-#' |Column Name                      |  Type  |
-#' |:------------------------------- |:-------|
-#' |match_id                         |  dbl   |
-#' |season                           |  dbl   |
-#' |match_datetime                   |  chr   |
-#' |officials_type                   |  chr   |
-#' |full_name                        |  chr   |
-#' |first_name                       |  chr   |
-#' |last_name                        |  chr   |
-#' |level                            |  chr   |
+#' @returns
+#' |Column Name                      |  Type   |
+#' |-------------------------------- |:--------|
+#' |match_id                         |  int    |
+#' |season                           |  int    |
+#' |match_datetime                   |  string |
+#' |officials_type                   |  string |
+#' |full_name                        |  string |
+#' |first_name                       |  string |
+#' |last_name                        |  string |
+#' |level                            |  string |
 #' @export
 #'
 #' @examples
-#' try({load_lovb_officials(2025)})
+#' try({load_officials("mlv", 2024)})
+#'
+load_officials <- function(league = NULL, seasons = NULL) {
 
-load_lovb_officials <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
-
-  if (is.null(seasons)) {
-    seasons <- 2025:current_year
-  } else {
-    validate_seasons(seasons, 2025)
-  }
-
-  officials <- readr::read_csv(
-    "https://github.com/awosoga/volleydata/releases/download/lovb-officials/lovb_officials.csv"
-  )
-  officials <- officials |> dplyr::filter(season %in% seasons)
-  return(officials)
+  return(get_data(league, seasons))
 }
 
-
-#' Load cleaned lovb play-by-play data from the volleydata repository.
+#' Load cleaned play-by-play data form the volleydata repository.
 #'
+#' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the play-by-play data for the specified seasons.
 #' |Column Name                      |  Type   |
-#' |-------------------------------- |:--------|
+#' |:------------------------------- |:--------|
 #' |match_id                         |  int    |
 #' |season                           |  int    |
 #' |match_datetime                   |  string |
@@ -100,34 +80,21 @@ load_lovb_officials <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' \donttest{try({load_lovb_pbp(2025)})}
+#' \donttest{try({load_pbp("mlv", 2024)})}
 
-load_lovb_pbp <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
+load_pbp <- function(league = NULL, seasons = NULL) {
 
-  if (is.null(seasons)) {
-    seasons <- 2025:current_year
-  } else {
-    validate_seasons(seasons, 2025)
-  }
-
-  pbp <- tibble::tibble()
-
-  for(season in seasons) {
-    temp <- readr::read_csv(
-      paste0("https://github.com/awosoga/volleydata/releases/download/lovb-pbp/lovb_pbp_", season, ".csv"),
-    )
-    pbp <- dplyr::bind_rows(pbp, temp)
-  }
-
-  return(pbp)
+  return(get_data(league, seasons))
 }
 
-#' Load cleaned lovb player info data from the volleydata repository.
+#' Load cleaned player info from the volleydata repository.
 #'
+#' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
-#' |Column Name               | Type  |
-#' |--------------------------|:------|
+#'
+#' @returns A data frame containing the player info data for the specified seasons.
+#' |Column Name               |  Type |
+#' |------------------------- |:------|
 #' |match_id                  |  int  |
 #' |season                    |  int  |
 #' |match_datetime            |  chr  |
@@ -159,43 +126,35 @@ load_lovb_pbp <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' try({load_lovb_player_info(2025)})
+#' try({load_player_info("mlv", 2024)})
 
-load_lovb_player_info <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
+load_player_info <- function(league = NULL, seasons = NULL) {
 
-  if (is.null(seasons)) {
-    seasons <- 2025:current_year
-  } else {
-    validate_seasons(seasons, 2025)
-  }
-
-  player_info <- readr::read_csv(
-    "https://github.com/awosoga/volleydata/releases/download/lovb-player-info/lovb_player_info.csv"
-  )
-  player_info <- player_info |> dplyr::filter(season %in% seasons)
-  return(player_info)
+  return(get_data(league, seasons))
 }
 
-
-#' Load cleaned lovb player boxscore data from the volleydata repository.
+#' Load cleaned player boxscore data from the volleydata repository.
 #'
+#' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
-#' @returns A data frame containing the player boxscore data for the specified seasons.
+#'
+#' @returns A data frame containing player boxscore data for the specified seasons.
 #' |Column Name              |  Type |
-#' |-------------------------|:------|
+#' |------------------------ |:------|
 #' |match_id                 |  int  |
 #' |season                   |  int  |
 #' |match_datetime           |  chr  |
 #' |team_involved            |  chr  |
 #' |team_name                |  chr  |
-#' |player_lastname          |  chr  |
-#' |player_firstname         |  chr  |
+#' |player_name              |  chr  |
+#' |last_name                |  chr  |
+#' |first_name               |  chr  |
 #' |sets_played              |  int  |
+#' |player_number            |  chr  |
 #' |is_captain               |  lgl  |
-#' |number                   |  chr  |
-#' |libero                   |  int  |
+#' |is_libero                |  int  |
+#' |set_starting_position    |  chr  |
 #' |set_number               |  int  |
 #' |serves                   |  int  |
 #' |serve_errors             |  int  |
@@ -222,26 +181,16 @@ load_lovb_player_info <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' try({load_lovb_player_boxscore(2025)})
+#' try({load_player_boxscore("mlv", 2024)})
 
-load_lovb_player_boxscore <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
+load_player_boxscore <- function(league = NULL, seasons = NULL) {
 
-  if (is.null(seasons)) {
-    seasons <- 2025:current_year
-  } else {
-    validate_seasons(seasons, 2025)
-  }
-
-  player_boxscore <- readr::read_csv(
-    "https://github.com/awosoga/volleydata/releases/download/lovb-player-boxscore/lovb_player_boxscore.csv"
-  )
-  player_boxscore <- player_boxscore |> dplyr::filter(season %in% seasons)
-  return(player_boxscore)
+  return(get_data(league, seasons))
 }
 
-#' Load cleaned lovb team boxscore data from the volleydata repository.
+#' Load cleaned team boxscore data from the volleydata repository.
 #'
+#' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing team boxscore data for the specified seasons.
@@ -278,62 +227,42 @@ load_lovb_player_boxscore <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' try({load_lovb_team_boxscore(2025)})
+#' try({load_team_boxscore("mlv", 2024)})
 
-load_lovb_team_boxscore <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
+load_team_boxscore <- function(league = NULL, seasons = NULL) {
 
-  if (is.null(seasons)) {
-    seasons <- 2025:current_year
-  } else {
-    validate_seasons(seasons, 2025)
-  }
-
-  team_boxscore <- readr::read_csv(
-    "https://github.com/awosoga/volleydata/releases/download/lovb-team-boxscore/lovb_team_boxscore.csv"
-  )
-  team_boxscore <- team_boxscore |> dplyr::filter(season %in% seasons)
-  return(team_boxscore)
+return(get_data(league, seasons))
 }
 
-#' Load cleaned lovb team staff data from the volleydata repository.
+#' Load cleaned team staff data from the volleydata repository.
 #'
+#' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the team staff data for the specified seasons.
-#' |Column Name                      |  Type  |
-#' |:------------------------------- |:-------|
-#' |match_id                         |  dbl   |
-#' |season                           |  dbl   |
-#' |match_datetime                   |  chr   |
-#' |team_name                        |  chr   |
-#' |staff_type                       |  chr   |
-#' |full_name                        |  chr   |
-#' |first_name                       |  chr   |
-#' |last_name                        |  chr   |
+#' |Column Name                      |  Type |
+#' |-------------------------------- |:------|
+#' |match_id                         |  dbl  |
+#' |season                           |  dbl  |
+#' |match_datetime                   |  chr  |
+#' |team_name                        |  chr  |
+#' |staff_type                       |  chr  |
+#' |full_name                        |  chr  |
+#' |first_name                       |  chr  |
+#' |last_name                        |  chr  |
 #' @export
-#'
+#
 #' @examples
-#' try({load_lovb_team_staff(2025)})
+#' try({load_team_staff("mlv", 2024)})
 
-load_lovb_team_staff <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
+load_team_staff <- function(league = NULL, seasons = NULL) {
 
-  if (is.null(seasons)) {
-    seasons <- 2025:current_year
-  } else {
-    validate_seasons(seasons, 2025)
-  }
-
-  team_staff <- readr::read_csv(
-    "https://github.com/awosoga/volleydata/releases/download/lovb-team-staff/lovb_team_staff.csv"
-  )
-  team_staff <- team_staff |> dplyr::filter(season %in% seasons)
-  return(team_staff)
+  return(get_data(league, seasons))
 }
 
-#' Load cleaned lovb events log data from the volleydata repository.
+#' Load cleaned events log data from the volleydata repository.
 #'
+#' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the events log data for the specified seasons.
@@ -393,24 +322,9 @@ load_lovb_team_staff <- function(seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' \donttest{try({load_lovb_events_log(2025)})}
+#' \donttest{try({load_events_log("mlv", 2024)})}
 
-load_lovb_events_log <- function(seasons = NULL) {
-  current_year <- as.integer(format(Sys.Date(), "%Y"))
+load_events_log <- function(league = NULL, seasons = NULL) {
 
-  if (is.null(seasons)) {
-    seasons <- 2025:current_year
-  } else {
-    validate_seasons(seasons, 2025)
-  }
-
-  events_log <- tibble::tibble()
-
-  for(season in seasons) {
-    temp <- readr::read_csv(
-      paste0("https://github.com/awosoga/volleydata/releases/download/lovb-events-log/lovb_events_log_", season, ".csv")
-    )
-    events_log <- dplyr::bind_rows(events_log, temp)
-  }
-  return(events_log)
+  return(get_data(league, seasons))
 }

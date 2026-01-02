@@ -3,38 +3,13 @@ template:
   bootstrap: 5
 
 reference:
-- title: rvolleydata leagues
-
-- subtitle: AUPVB
-  desc: AUPVB data
+- title: All Functions
   contents:
-  - load_aupvb_leaderboards
-  - load_aupvb_pbp
-  - load_aupvb_player_info
-
-- subtitle: LOVB
-  desc: LOVB data
-  contents:
-  - load_lovb_events_log
-  - load_lovb_officials
-  - load_lovb_pbp
-  - load_lovb_player_info
-  - load_lovb_schedule
-  - load_lovb_team_staff
-  - load_lovb_player_boxscore
-  - load_lovb_team_boxscore
-
-- subtitle: MLV
-  desc: MLV data
-  contents:
-  - load_mlv_events_log
-  - load_mlv_officials
-  - load_mlv_pbp
-  - load_mlv_player_info
-  - load_mlv_schedule
-  - load_mlv_team_staff
-  - load_mlv_player_boxscore
-  - load_mlv_team_boxscore
-
-
-
+  - load_events_log
+  - load_officials
+  - load_pbp
+  - load_player_info
+  - load_schedule
+  - load_team_staff
+  - load_player_boxscore
+  - load_team_boxscore

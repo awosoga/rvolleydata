@@ -42,6 +42,10 @@ devtools::install_github("awosoga/rvolleydata")
 
 Please refer to the [package vignette](https://awosoga.github.io/rvolleydata/articles/rvolleydata-how-to-use) for more information on how to use this library.
 
+## Note
+
+Some Athletes Unlimited (AU) data is missing. 
+
 ## Acknowledgement
 
 A big thanks to [Rebecca Lai](https://www.rebeccalai.net) for the awesome logo design!
