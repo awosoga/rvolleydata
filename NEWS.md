@@ -1,3 +1,9 @@
+# rvolleydata 2.0.0
+## Major changes
+
+* Refactored all functions to be more general so that the user can specify the `league`
+as an argument. For example, `load_pbp(league = "mlv", seasons = 2024:2025)`.
+
 # rvolleydata 1.1.1
 ## Patches
 * Correct the documentation for different functions

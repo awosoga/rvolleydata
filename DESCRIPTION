@@ -1,6 +1,6 @@
 Package: rvolleydata
 Title: Extract Data from Professional Volleyball Leagues in North America
-Version: 1.1.1
+Version: 2.0.0
 Authors@R: 
     c(person("David", "Awosoga", , "odo.awosoga@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-2741-5770")),
