@@ -1,13 +1,30 @@
 # Changelog
 
+## rvolleydata 2.0.0
+
+### Major changes
+
+- Deprecated all `load_league_xxx()` functions in favor of more general
+  functions:
+  - `load_pbp(league, seasons)`
+  - `load_player_info(league, seasons)`
+  - `load_events_log(league, seasons)`
+  - `load_officials(league, seasons)`
+  - `load_schedule(league, seasons)`
+  - `load_team_staff(league, seasons)`
+  - `load_team_boxscore(league, seasons)`
+  - `load_player_boxscore(league, seasons)`
+
+### Minor changes
+
+- Updated AU data to match structure of MLV and LOVB.
+
 ## rvolleydata 1.1.1
 
 ### Patches
 
 - Correct the documentation for different functions
-- Fixed the
-  [`load_mlv_schedule()`](https://awosoga.github.io/rvolleydata/reference/load_mlv_schedule.md)
-  function
+- Fixed the `load_mlv_schedule()` function
 
 ## rvolleydata 1.1.0
 
@@ -29,35 +46,35 @@ CRAN release: 2025-09-02
 
 - Contains the following functions:
 
-- [`load_aupvb_leaderboards()`](https://awosoga.github.io/rvolleydata/reference/load_aupvb_leaderboards.md)
+- `load_aupvb_leaderboards()`
 
-- [`load_aupvb_pbp()`](https://awosoga.github.io/rvolleydata/reference/load_aupvb_pbp.md)
+- `load_aupvb_pbp()`
 
-- [`load_aupvb_player_info()`](https://awosoga.github.io/rvolleydata/reference/load_aupvb_player_info.md)
+- `load_aupvb_player_info()`
 
-- [`load_lovb_events_log()`](https://awosoga.github.io/rvolleydata/reference/load_lovb_events_log.md)
+- `load_lovb_events_log()`
 
-- [`load_lovb_officials()`](https://awosoga.github.io/rvolleydata/reference/load_lovb_officials.md)
+- `load_lovb_officials()`
 
-- [`load_lovb_pbp()`](https://awosoga.github.io/rvolleydata/reference/load_lovb_pbp.md)
+- `load_lovb_pbp()`
 
-- [`load_lovb_player_info()`](https://awosoga.github.io/rvolleydata/reference/load_lovb_player_info.md)
+- `load_lovb_player_info()`
 
-- [`load_lovb_schedule()`](https://awosoga.github.io/rvolleydata/reference/load_lovb_schedule.md)
+- `load_lovb_schedule()`
 
 - `load_lovb_team_saff()`
 
-- [`load_mlv_events_log()`](https://awosoga.github.io/rvolleydata/reference/load_mlv_events_log.md)
+- `load_mlv_events_log()`
 
-- [`load_mlv_officials()`](https://awosoga.github.io/rvolleydata/reference/load_mlv_officials.md)
+- `load_mlv_officials()`
 
-- [`load_mlv_pbp()`](https://awosoga.github.io/rvolleydata/reference/load_mlv_pbp.md)
+- `load_mlv_pbp()`
 
-- [`load_mlv_player_info()`](https://awosoga.github.io/rvolleydata/reference/load_mlv_player_info.md)
+- `load_mlv_player_info()`
 
-- [`load_mlv_schedule()`](https://awosoga.github.io/rvolleydata/reference/load_mlv_schedule.md)
+- `load_mlv_schedule()`
 
-- [`load_mlv_team_staff()`](https://awosoga.github.io/rvolleydata/reference/load_mlv_team_staff.md)
+- `load_mlv_team_staff()`
 
 - Added logo and badges to README file.
 

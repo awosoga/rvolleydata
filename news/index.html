@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rvolleydata</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,15 +32,35 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.svg" class="logo" alt=""><h1>Changelog</h1>
-      <small>Source: <a href="https://github.com/awosoga/rvolleydata/blob/aupvb-schedule/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="https://github.com/awosoga/rvolleydata/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="2.0.0" id="rvolleydata-200">rvolleydata 2.0.0<a class="anchor" aria-label="anchor" href="#rvolleydata-200"></a></h2>
+<div class="section level3">
+<h3 id="major-changes-2-0-0">Major changes<a class="anchor" aria-label="anchor" href="#major-changes-2-0-0"></a></h3>
+<ul><li>Deprecated all <code>load_league_xxx()</code> functions in favor of more general functions:
+<ul><li><code>load_pbp(league, seasons)</code></li>
+<li><code>load_player_info(league, seasons)</code></li>
+<li><code>load_events_log(league, seasons)</code></li>
+<li><code>load_officials(league, seasons)</code></li>
+<li><code>load_schedule(league, seasons)</code></li>
+<li><code>load_team_staff(league, seasons)</code></li>
+<li><code>load_team_boxscore(league, seasons)</code></li>
+<li><code>load_player_boxscore(league, seasons)</code></li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="minor-changes-2-0-0">Minor changes<a class="anchor" aria-label="anchor" href="#minor-changes-2-0-0"></a></h3>
+<ul><li>Updated AU data to match structure of MLV and LOVB.</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.1.1" id="rvolleydata-111">rvolleydata 1.1.1<a class="anchor" aria-label="anchor" href="#rvolleydata-111"></a></h2>
 <div class="section level3">
 <h3 id="patches-1-1-1">Patches<a class="anchor" aria-label="anchor" href="#patches-1-1-1"></a></h3>
 <ul><li>Correct the documentation for different functions</li>
-<li>Fixed the <code><a href="../reference/load_mlv_schedule.html">load_mlv_schedule()</a></code> function</li>
+<li>Fixed the <code>load_mlv_schedule()</code> function</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -58,21 +78,21 @@
 <div class="section level3">
 <h3 id="major-changes-1-0-0">Major changes<a class="anchor" aria-label="anchor" href="#major-changes-1-0-0"></a></h3>
 <ul><li><p>Contains the following functions:</p></li>
-<li><p><code><a href="../reference/load_aupvb_leaderboards.html">load_aupvb_leaderboards()</a></code></p></li>
-<li><p><code><a href="../reference/load_aupvb_pbp.html">load_aupvb_pbp()</a></code></p></li>
-<li><p><code><a href="../reference/load_aupvb_player_info.html">load_aupvb_player_info()</a></code></p></li>
-<li><p><code><a href="../reference/load_lovb_events_log.html">load_lovb_events_log()</a></code></p></li>
-<li><p><code><a href="../reference/load_lovb_officials.html">load_lovb_officials()</a></code></p></li>
-<li><p><code><a href="../reference/load_lovb_pbp.html">load_lovb_pbp()</a></code></p></li>
-<li><p><code><a href="../reference/load_lovb_player_info.html">load_lovb_player_info()</a></code></p></li>
-<li><p><code><a href="../reference/load_lovb_schedule.html">load_lovb_schedule()</a></code></p></li>
+<li><p><code>load_aupvb_leaderboards()</code></p></li>
+<li><p><code>load_aupvb_pbp()</code></p></li>
+<li><p><code>load_aupvb_player_info()</code></p></li>
+<li><p><code>load_lovb_events_log()</code></p></li>
+<li><p><code>load_lovb_officials()</code></p></li>
+<li><p><code>load_lovb_pbp()</code></p></li>
+<li><p><code>load_lovb_player_info()</code></p></li>
+<li><p><code>load_lovb_schedule()</code></p></li>
 <li><p><code>load_lovb_team_saff()</code></p></li>
-<li><p><code><a href="../reference/load_mlv_events_log.html">load_mlv_events_log()</a></code></p></li>
-<li><p><code><a href="../reference/load_mlv_officials.html">load_mlv_officials()</a></code></p></li>
-<li><p><code><a href="../reference/load_mlv_pbp.html">load_mlv_pbp()</a></code></p></li>
-<li><p><code><a href="../reference/load_mlv_player_info.html">load_mlv_player_info()</a></code></p></li>
-<li><p><code><a href="../reference/load_mlv_schedule.html">load_mlv_schedule()</a></code></p></li>
-<li><p><code><a href="../reference/load_mlv_team_staff.html">load_mlv_team_staff()</a></code></p></li>
+<li><p><code>load_mlv_events_log()</code></p></li>
+<li><p><code>load_mlv_officials()</code></p></li>
+<li><p><code>load_mlv_pbp()</code></p></li>
+<li><p><code>load_mlv_player_info()</code></p></li>
+<li><p><code>load_mlv_schedule()</code></p></li>
+<li><p><code>load_mlv_team_staff()</code></p></li>
 <li><p>Added logo and badges to README file.</p></li>
 <li><p>Initial CRAN submission.</p></li>
 </ul></div>
