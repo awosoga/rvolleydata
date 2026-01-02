@@ -8,7 +8,7 @@ Authors@R:
            comment = c(ORCID = "0009-0009-6045-6839")),
     person("Ryan", "Du", , "ryandu343@gmail.com", role = c("aut"))       
            )
-Description: Gather boxscore, play-by-play, and auxiliary data from Major League Volleyball (MLV) <https://provolleyball.com>, League One Volleyball Pro (LOVB Pro) <https://www.lovb.com/pro-league>, and Athletes Unlimited Pro Volleyball <https://auprosports.com/volleyball/> to create a repository of basic and advanced statistics for teams and players.
+Description: Gather boxscore, play-by-play, and auxiliary data from Major League Volleyball (MLV) <https://provolleyball.com>, League One Volleyball Pro (LOVB) <https://www.lovb.com/pro-league>, and Athletes Unlimited Pro Volleyball (AU) <https://auprosports.com/volleyball/> to create a repository of basic and advanced statistics for teams and players.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

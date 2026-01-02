@@ -16,8 +16,8 @@ stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecy
 The goal of `rvolleydata` is to help people access clean and tidy data
 from [League One Volleyball Pro (LOVB)](https://www.lovb.com/),
 [Athletes Unlimited Pro Volleyball
-(AUPVB)](https://auprosports.com/volleyball/), and [Major League
-Volleyball (MLV)](https://provolleyball.com/) leagues.
+(AU)](https://auprosports.com/volleyball/), and [Major League Volleyball
+(MLV)](https://provolleyball.com/) leagues.
 
 ## Installations
 
@@ -42,6 +42,13 @@ devtools::install_github("awosoga/rvolleydata")
 Please refer to the [package
 vignette](https://awosoga.github.io/rvolleydata/articles/rvolleydata-how-to-use)
 for more information on how to use this library.
+
+## Note
+
+Some Athletes Unlimited (AU) data, such as from exhibition matches
+against collegiate teams, is missing. Data from matches played during
+the 2021 season are also not included due to incongruent data
+structures.
 
 ## Acknowledgement
 
