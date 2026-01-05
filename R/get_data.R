@@ -9,18 +9,18 @@ utils::globalVariables(c("season"))
 #'                All years must be 2023 or later.
 #'
 #' @returns
-#' |Column Name                      |  Type   |
-#' |:------------------------------- |:--------|
-#' |season                           |  int    |
-#' |date                             |  string |
-#' |home_team                        |  string |
-#' |away_team                        |  string |
-#' |home_team_set_wins               |  int    |
-#' |away_team_set_wins               |  int    |
-#' |result                           |  string |
-#' |match_id                         |  int    |
-#' |phase                            |  string |
-#' |league                           |  string |
+#' |Column Name                      |  Type  |
+#' |:------------------------------- |:-------|
+#' |season                           |  int   |
+#' |date                             |  chr   |
+#' |home_team                        |  chr   |
+#' |away_team                        |  chr   |
+#' |home_team_set_wins               |  int   |
+#' |away_team_set_wins               |  int   |
+#' |result                           |  chr   |
+#' |match_id                         |  int   |
+#' |phase                            |  chr   |
+#' |league                           |  chr   |
 #' @export
 #'
 #' @examples
@@ -37,16 +37,17 @@ load_schedule <- function(league = NULL, seasons = NULL) {
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns
-#' |Column Name                      |  Type   |
-#' |-------------------------------- |:--------|
-#' |match_id                         |  int    |
-#' |season                           |  int    |
-#' |match_datetime                   |  string |
-#' |officials_type                   |  string |
-#' |full_name                        |  string |
-#' |first_name                       |  string |
-#' |last_name                        |  string |
-#' |level                            |  string |
+#' |Column Name                      |  Type  |
+#' |-------------------------------- |:-------|
+#' |match_id                         |  int   |
+#' |season                           |  int   |
+#' |match_datetime                   |  chr   |
+#' |officials_type                   |  chr   |
+#' |full_name                        |  chr   |
+#' |first_name                       |  chr   |
+#' |last_name                        |  chr   |
+#' |level                            |  chr   |
+#' |league                           |  chr   |
 #' @export
 #'
 #' @examples
@@ -63,22 +64,23 @@ load_officials <- function(league = NULL, seasons = NULL) {
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the play-by-play data for the specified seasons.
-#' |Column Name                      |  Type   |
-#' |:------------------------------- |:--------|
-#' |match_id                         |  int    |
-#' |season                           |  int    |
-#' |match_datetime                   |  string |
-#' |home_team_name                   |  string |
-#' |away_team_name                   |  string |
-#' |team_involved                    |  string |
-#' |jersey_number                    |  int    |
-#' |action                           |  string |
-#' |outcome                          |  string |
-#' |set                              |  int    |
-#' |point_number                     |  int    |
-#' |point_winner                     |  string |
-#' |home_score                       |  int    |
-#' |away_score                       |  int    |
+#' |Column Name                      |  Type  |
+#' |:------------------------------- |:-------|
+#' |match_id                         |  int   |
+#' |season                           |  int   |
+#' |match_datetime                   |  chr   |
+#' |home_team_name                   |  chr   |
+#' |away_team_name                   |  chr   |
+#' |team_involved                    |  chr   |
+#' |jersey_number                    |  int   |
+#' |action                           |  chr   |
+#' |outcome                          |  chr   |
+#' |set                              |  int   |
+#' |point_number                     |  int   |
+#' |point_winner                     |  chr   |
+#' |home_score                       |  int   |
+#' |away_score                       |  int   |
+#' |rally_length                     |  int   |
 #' @export
 #'
 #' @examples
@@ -125,6 +127,7 @@ load_pbp <- function(league = NULL, seasons = NULL) {
 #' |team_short_name           |  chr  |
 #' |team_code                 |  chr  |
 #' |team_color                |  chr  |
+#' |league                    |  chr  |
 #' @export
 #'
 #' @examples
@@ -180,6 +183,7 @@ load_player_info <- function(league = NULL, seasons = NULL) {
 #' |id                       |  chr  |
 #' |spike_hp                 |  int  |
 #' |points                   |  int  |
+#' |league                   |  chr  |
 #' @export
 #'
 #' @examples
@@ -226,6 +230,7 @@ load_player_boxscore <- function(league = NULL, seasons = NULL) {
 #' |id                       |  chr  |
 #' |spike_hp                 |  int  |
 #' |points                   |  int  |
+#' |league                   |  chr  |
 #' @export
 #'
 #' @examples
@@ -252,6 +257,7 @@ return(get_data(league, seasons))
 #' |full_name                        |  chr  |
 #' |first_name                       |  chr  |
 #' |last_name                        |  chr  |
+#' |league                           |  chr  |
 #' @export
 #
 #' @examples
@@ -268,59 +274,60 @@ load_team_staff <- function(league = NULL, seasons = NULL) {
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
 #' @returns A data frame containing the events log data for the specified seasons.
-#' |Column Name                      |  Type   |
-#' |:------------------------------- |:--------|
-#' |match_id                         |  int    |
-#' |season                           |  int    |
-#' |match_datetime                   |  string |
-#' |set                              |  int    |
-#' |set_start_time                   |  string |
-#' |set_end_time                     |  string |
-#' |set_duration                     |  int    |
-#' |set_final_home_score             |  int    |
-#' |set_final_away_score             |  int    |
-#' |event_type                       |  string |
-#' |event_time                       |  string |
-#' |libero_enters                    |  bool   |
-#' |team_involved                    |  string |
-#' |libero_jersey_number             |  int    |
-#' |libero_substitute_jersey_number  |  int    |
-#' |rally_start_time                 |  string |
-#' |rally_end_time                   |  string |
-#' |rally_point_winner               |  string |
-#' |substitute_in_jersey_number      |  int    |
-#' |substitute_out_jersey_number     |  int    |
-#' |challenge_approved               |  string |
-#' |challenge_reason                 |  string |
-#' |challenge_method                 |  string |
-#' |challenge_response               |  string |
-#' |challenge_at_home_score          |  float  |
-#' |challenge_at_away_score          |  float  |
-#' |challenge_score_change           |  string |
-#' |serving_team                     |  string |
-#' |current_home_score               |  float  |
-#' |current_away_score               |  float  |
-#' |home_team_p1                     |  float  |
-#' |home_team_p2                     |  float  |
-#' |home_team_p3                     |  float  |
-#' |home_team_p4                     |  float  |
-#' |home_team_p5                     |  float  |
-#' |home_team_p6                     |  float  |
-#' |away_team_p1                     |  float  |
-#' |away_team_p2                     |  float  |
-#' |away_team_p3                     |  float  |
-#' |away_team_p4                     |  float  |
-#' |away_team_p5                     |  float  |
-#' |away_team_p6                     |  float  |
-#' |verified_time                    |  string |
-#' |verified_method                  |  string |
-#' |sanction_type                    |  string |
-#' |sanction_remark                  |  float  |
-#' |sanction_staff_role              |  string |
-#' |staff_first_name                 |  string |
-#' |staff_last_name                  |  string |
-#' |staff_type                       |  string |
-#' |is_exceptional                   |  string |
+#' |Column Name                      |  Type |
+#' |:------------------------------- |:------|
+#' |match_id                         |  int  |
+#' |season                           |  int  |
+#' |match_datetime                   |  chr  |
+#' |set                              |  int  |
+#' |set_start_time                   |  chr  |
+#' |set_end_time                     |  chr  |
+#' |set_duration                     |  int  |
+#' |set_final_home_score             |  int  |
+#' |set_final_away_score             |  int  |
+#' |event_type                       |  chr  |
+#' |event_time                       |  chr  |
+#' |libero_enters                    |  lgl  |
+#' |team_involved                    |  chr  |
+#' |libero_jersey_number             |  int  |
+#' |libero_substitute_jersey_number  |  int  |
+#' |rally_start_time                 |  chr  |
+#' |rally_end_time                   |  chr  |
+#' |rally_point_winner               |  chr  |
+#' |substitute_in_jersey_number      |  int  |
+#' |substitute_out_jersey_number     |  int  |
+#' |challenge_approved               |  chr  |
+#' |challenge_reason                 |  chr  |
+#' |challenge_method                 |  chr  |
+#' |challenge_response               |  chr  |
+#' |challenge_at_home_score          |  dbl  |
+#' |challenge_at_away_score          |  dbl  |
+#' |challenge_score_change           |  chr  |
+#' |serving_team                     |  chr  |
+#' |current_home_score               |  dbl  |
+#' |current_away_score               |  dbl  |
+#' |home_team_p1                     |  dbl  |
+#' |home_team_p2                     |  dbl  |
+#' |home_team_p3                     |  dbl  |
+#' |home_team_p4                     |  dbl  |
+#' |home_team_p5                     |  dbl  |
+#' |home_team_p6                     |  dbl  |
+#' |away_team_p1                     |  dbl  |
+#' |away_team_p2                     |  dbl  |
+#' |away_team_p3                     |  dbl  |
+#' |away_team_p4                     |  dbl  |
+#' |away_team_p5                     |  dbl  |
+#' |away_team_p6                     |  dbl  |
+#' |verified_time                    |  chr  |
+#' |verified_method                  |  chr  |
+#' |sanction_type                    |  chr  |
+#' |sanction_remark                  |  dbl  |
+#' |sanction_staff_role              |  chr  |
+#' |staff_first_name                 |  chr  |
+#' |staff_last_name                  |  chr  |
+#' |staff_type                       |  chr  |
+#' |is_exceptional                   |  chr  |
+#' |league                           |  chr  |
 #' @export
 #'
 #' @examples

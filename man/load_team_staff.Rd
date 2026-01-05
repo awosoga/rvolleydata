@@ -22,6 +22,7 @@ A data frame containing the team staff data for the specified seasons.\tabular{l
    full_name \tab chr \cr
    first_name \tab chr \cr
    last_name \tab chr \cr
+   league \tab chr \cr
 }
 }
 \description{

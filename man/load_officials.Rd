@@ -16,12 +16,13 @@ load_officials(league = NULL, seasons = NULL)
    Column Name \tab Type \cr
    match_id \tab int \cr
    season \tab int \cr
-   match_datetime \tab string \cr
-   officials_type \tab string \cr
-   full_name \tab string \cr
-   first_name \tab string \cr
-   last_name \tab string \cr
-   level \tab string \cr
+   match_datetime \tab chr \cr
+   officials_type \tab chr \cr
+   full_name \tab chr \cr
+   first_name \tab chr \cr
+   last_name \tab chr \cr
+   level \tab chr \cr
+   league \tab chr \cr
 }
 }
 \description{

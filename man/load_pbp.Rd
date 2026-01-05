@@ -16,18 +16,19 @@ A data frame containing the play-by-play data for the specified seasons.\tabular
    Column Name \tab Type \cr
    match_id \tab int \cr
    season \tab int \cr
-   match_datetime \tab string \cr
-   home_team_name \tab string \cr
-   away_team_name \tab string \cr
-   team_involved \tab string \cr
+   match_datetime \tab chr \cr
+   home_team_name \tab chr \cr
+   away_team_name \tab chr \cr
+   team_involved \tab chr \cr
    jersey_number \tab int \cr
-   action \tab string \cr
-   outcome \tab string \cr
+   action \tab chr \cr
+   outcome \tab chr \cr
    set \tab int \cr
    point_number \tab int \cr
-   point_winner \tab string \cr
+   point_winner \tab chr \cr
    home_score \tab int \cr
    away_score \tab int \cr
+   rally_length \tab int \cr
 }
 }
 \description{

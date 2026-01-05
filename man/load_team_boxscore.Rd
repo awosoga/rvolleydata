@@ -42,6 +42,7 @@ A data frame containing team boxscore data for the specified seasons.\tabular{ll
    id \tab chr \cr
    spike_hp \tab int \cr
    points \tab int \cr
+   league \tab chr \cr
 }
 }
 \description{

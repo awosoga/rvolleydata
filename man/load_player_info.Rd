@@ -42,6 +42,7 @@ A data frame containing the player info data for the specified seasons.\tabular{
    team_short_name \tab chr \cr
    team_code \tab chr \cr
    team_color \tab chr \cr
+   league \tab chr \cr
 }
 }
 \description{

@@ -18,15 +18,15 @@ load_schedule(league = NULL, seasons = NULL)
 \tabular{ll}{
    Column Name \tab Type \cr
    season \tab int \cr
-   date \tab string \cr
-   home_team \tab string \cr
-   away_team \tab string \cr
+   date \tab chr \cr
+   home_team \tab chr \cr
+   away_team \tab chr \cr
    home_team_set_wins \tab int \cr
    away_team_set_wins \tab int \cr
-   result \tab string \cr
+   result \tab chr \cr
    match_id \tab int \cr
-   phase \tab string \cr
-   league \tab string \cr
+   phase \tab chr \cr
+   league \tab chr \cr
 }
 }
 \description{
