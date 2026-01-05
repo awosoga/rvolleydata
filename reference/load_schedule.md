@@ -34,12 +34,14 @@ load_schedule(league = NULL, seasons = NULL)
 | away_team_set_wins | int    |
 | result             | string |
 | match_id           | int    |
+| phase              | string |
+| league             | string |
 
 ## Examples
 
 ``` r
 try({load_schedule("mlv", 2024)})
-#> # A tibble: 87 × 8
+#> # A tibble: 87 × 9
 #>    season date       home_team   away_team home_team_set_wins away_team_set_wins
 #>     <dbl> <date>     <chr>       <chr>                  <dbl>              <dbl>
 #>  1   2024 2024-05-18 Omaha Supe… Grand Ra…                  3                  0
@@ -53,5 +55,5 @@ try({load_schedule("mlv", 2024)})
 #>  9   2024 2024-05-07 San Diego … Columbus…                  3                  1
 #> 10   2024 2024-05-06 Vegas Thri… Omaha Su…                  0                  3
 #> # ℹ 77 more rows
-#> # ℹ 2 more variables: result <chr>, league <chr>
+#> # ℹ 3 more variables: result <chr>, match_id <dbl>, league <chr>
 ```
