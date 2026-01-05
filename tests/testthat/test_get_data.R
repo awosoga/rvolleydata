@@ -1,5 +1,5 @@
-testthat::test_that("load_aupvb_player_info() works", {
-  player_info_data_2025 <- load_aupvb_player_info(2023)
+testthat::test_that("load_player_info() works", {
+  player_info_data_2025 <- load_player_info(2023)
   testthat::expect_type(player_info_data_2025, "list")
   testthat::expect_true(nrow(player_info_data_2025) != 0)
 })
@@ -58,32 +58,32 @@ testthat::test_that("load_mlv_schedule() works", {
   testthat::expect_true(nrow(schedule_data_2025) != 0)
 })
 
-testthat::test_that("load_mlv_officials() works", {
+testthat::test_that("load_officials() works", {
   officials_data_2025 <- load_mlv_officials(2025)
   testthat::expect_type(officials_data_2025, "list")
   testthat::expect_true(nrow(officials_data_2025) != 0)
 })
 
-testthat::test_that("load_mlv_pbp() works", {
-  pbp_data_2025 <- load_mlv_pbp(2025)
+testthat::test_that("load_pbp() works", {
+  pbp_data_2025 <- load_pbp("mlv", 2025)
   testthat::expect_type(pbp_data_2025, "list")
   testthat::expect_true(nrow(pbp_data_2025) != 0)
 })
 
 testthat::test_that("load_mlv_player_info() works", {
-  player_info_data_2025 <- load_mlv_player_info(2025)
+  player_info_data_2025 <- load_player_info("au", 2025)
   testthat::expect_type(player_info_data_2025, "list")
   testthat::expect_true(nrow(player_info_data_2025) != 0)
 })
 
-testthat::test_that("load_mlv_team_staff() works", {
-  team_staff_data_2025 <- load_mlv_team_staff(2025)
+testthat::test_that("load_team_staff() works", {
+  team_staff_data_2025 <- load_team_staff("lovb", 2025)
   testthat::expect_type(team_staff_data_2025, "list")
   testthat::expect_true(nrow(team_staff_data_2025) != 0)
 })
 
-testthat::test_that("load_mlv_events_log() works", {
-  events_log_data_2025 <- load_mlv_events_log(2025)
+testthat::test_that("load_events_log() works", {
+  events_log_data_2025 <- load_events_log("mlv", 2025)
   testthat::expect_type(events_log_data_2025, "list")
   testthat::expect_true(nrow(events_log_data_2025) != 0)
 })

@@ -19,6 +19,8 @@ utils::globalVariables(c("season"))
 #' |away_team_set_wins               |  int    |
 #' |result                           |  string |
 #' |match_id                         |  int    |
+#' |phase                            |  string |
+#' |league                           |  string |
 #' @export
 #'
 #' @examples
@@ -181,7 +183,7 @@ load_player_info <- function(league = NULL, seasons = NULL) {
 #' @export
 #'
 #' @examples
-#' try({load_player_boxscore("mlv", 2024)})
+#' \donttest{try({load_player_boxscore("mlv", 2024)})}
 
 load_player_boxscore <- function(league = NULL, seasons = NULL) {
 

@@ -25,6 +25,8 @@ load_schedule(league = NULL, seasons = NULL)
    away_team_set_wins \tab int \cr
    result \tab string \cr
    match_id \tab int \cr
+   phase \tab string \cr
+   league \tab string \cr
 }
 }
 \description{
