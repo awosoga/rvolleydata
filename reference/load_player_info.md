@@ -54,6 +54,7 @@ A data frame containing the player info data for the specified seasons.
 | team_short_name         | chr  |
 | team_code               | chr  |
 | team_color              | chr  |
+| league                  | chr  |
 
 ## Examples
 

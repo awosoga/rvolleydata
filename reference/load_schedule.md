@@ -23,19 +23,19 @@ load_schedule(league = NULL, seasons = NULL)
 
 ## Value
 
-|                    |        |
-|--------------------|--------|
-| Column Name        | Type   |
-| season             | int    |
-| date               | string |
-| home_team          | string |
-| away_team          | string |
-| home_team_set_wins | int    |
-| away_team_set_wins | int    |
-| result             | string |
-| match_id           | int    |
-| phase              | string |
-| league             | string |
+|                    |      |
+|--------------------|------|
+| Column Name        | Type |
+| season             | int  |
+| date               | chr  |
+| home_team          | chr  |
+| away_team          | chr  |
+| home_team_set_wins | int  |
+| away_team_set_wins | int  |
+| result             | chr  |
+| match_id           | int  |
+| phase              | chr  |
+| league             | chr  |
 
 ## Examples
 

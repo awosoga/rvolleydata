@@ -21,17 +21,18 @@ load_officials(league = NULL, seasons = NULL)
 
 ## Value
 
-|                |        |
-|----------------|--------|
-| Column Name    | Type   |
-| match_id       | int    |
-| season         | int    |
-| match_datetime | string |
-| officials_type | string |
-| full_name      | string |
-| first_name     | string |
-| last_name      | string |
-| level          | string |
+|                |      |
+|----------------|------|
+| Column Name    | Type |
+| match_id       | int  |
+| season         | int  |
+| match_datetime | chr  |
+| officials_type | chr  |
+| full_name      | chr  |
+| first_name     | chr  |
+| last_name      | chr  |
+| level          | chr  |
+| league         | chr  |
 
 ## Examples
 

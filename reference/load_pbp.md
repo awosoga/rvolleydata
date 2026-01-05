@@ -23,23 +23,24 @@ load_pbp(league = NULL, seasons = NULL)
 
 A data frame containing the play-by-play data for the specified seasons.
 
-|                |        |
-|----------------|--------|
-| Column Name    | Type   |
-| match_id       | int    |
-| season         | int    |
-| match_datetime | string |
-| home_team_name | string |
-| away_team_name | string |
-| team_involved  | string |
-| jersey_number  | int    |
-| action         | string |
-| outcome        | string |
-| set            | int    |
-| point_number   | int    |
-| point_winner   | string |
-| home_score     | int    |
-| away_score     | int    |
+|                |      |
+|----------------|------|
+| Column Name    | Type |
+| match_id       | int  |
+| season         | int  |
+| match_datetime | chr  |
+| home_team_name | chr  |
+| away_team_name | chr  |
+| team_involved  | chr  |
+| jersey_number  | int  |
+| action         | chr  |
+| outcome        | chr  |
+| set            | int  |
+| point_number   | int  |
+| point_winner   | chr  |
+| home_score     | int  |
+| away_score     | int  |
+| rally_length   | int  |
 
 ## Examples
 

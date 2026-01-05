@@ -34,12 +34,13 @@ A data frame containing the team staff data for the specified seasons.
 | full_name      | chr  |
 | first_name     | chr  |
 | last_name      | chr  |
+| league         | chr  |
 
 ## Examples
 
 ``` r
 try({load_team_staff("mlv", 2024)})
 #> Warning: Failed to open 'https://github.com/awosoga/volleydata/releases/download/pvf-team-staff/pvf_team_staff.csv': The requested URL returned error: 404
-#> Error in open.connection(structure(4L, class = c("curl", "connection"), conn_id = <pointer: 0x55b2da1d4d80>),  : 
+#> Error in open.connection(structure(4L, class = c("curl", "connection"), conn_id = <pointer: 0x559b6229f620>),  : 
 #>   cannot open the connection
 ```

@@ -54,6 +54,7 @@ A data frame containing team boxscore data for the specified seasons.
 | id                       | chr  |
 | spike_hp                 | int  |
 | points                   | int  |
+| league                   | chr  |
 
 ## Examples
 
