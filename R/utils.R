@@ -32,14 +32,14 @@ internal_name <- function(league) {
 }
 
 
-get_data <- function(league, seasons) {
-
-  league <- tolower(league)
+get_data <- function(league = NULL, seasons) {
 
   stopifnot("league must be one of 'mlv', 'lovb', or 'au'" =
               !is.null(league) ||
               league %in% c("mlv", "lovb", "au") ||
               length(league) == 1)
+
+  league <- tolower(league)
 
   current_year <- as.integer(format(Sys.Date(), "%Y"))
 
@@ -49,7 +49,7 @@ get_data <- function(league, seasons) {
     validate_seasons(seasons, start_season(league))
   }
 
-  type = gsub("^load", "", as.character(sys.call(-1))[1]) # get the function name
+  type = gsub("^.*load", "", as.character(sys.call(-1))[1]) # get the function name
 
   lg <- internal_name(league)
 
