@@ -9,6 +9,7 @@ Volleyball (AU)](https://auprosports.com/volleyball/), and [Major League
 Volleyball (MLV)](https://provolleyball.com) leagues.
 
 ``` r
+
 library(rvolleydata)
 library(dplyr)
 ```
@@ -20,6 +21,7 @@ You can install the development version of
 [GitHub](https://github.com/awosoga/rvolleydata) with:
 
 ``` r
+
 # install.packages("devtools")
 devtools::install_github("awosoga/rvolleydata")
 ```
@@ -36,6 +38,7 @@ season(s).
 Use `load_schedule` to access league schedules.
 
 ``` r
+
 schedule <- load_schedule("au", 2025)
 glimpse(schedule)
 #> Rows: 31
@@ -57,6 +60,7 @@ glimpse(schedule)
 Use `load_pbp` to access play-by-play data.
 
 ``` r
+
 pbp <- load_pbp("lovb", 2025)
 glimpse(pbp)
 #> Rows: 73,416
@@ -83,6 +87,7 @@ glimpse(pbp)
 Use `load_officials` to access officials data.
 
 ``` r
+
 officials <- load_officials("mlv", 2025)
 glimpse(officials)
 #> Rows: 368
@@ -103,6 +108,7 @@ glimpse(officials)
 Use `load_player_info` to access player information.
 
 ``` r
+
 player_info <- load_player_info("au", 2025)
 glimpse(player_info)
 #> Rows: 682
@@ -143,6 +149,7 @@ glimpse(player_info)
 Use `load_team_staff` to access team staff data.
 
 ``` r
+
 team_staff <- load_team_staff("lovb", 2025)
 glimpse(team_staff)
 #> Rows: 242
@@ -163,6 +170,7 @@ glimpse(team_staff)
 Use `load_events_log` to access events log data.
 
 ``` r
+
 events_log <- load_events_log("mlv", 2025)
 glimpse(events_log)
 #> Rows: 36,784
@@ -226,6 +234,7 @@ glimpse(events_log)
 Use `load_player_boxscore` to access player boxscore data.
 
 ``` r
+
 player_boxscores <- load_player_boxscore("au", 2025)
 glimpse(player_boxscores)
 #> Rows: 1,563
@@ -274,6 +283,7 @@ glimpse(player_boxscores)
 Use `load_team_boxscore` to access team boxscore data.
 
 ``` r
+
 team_boxscores <- load_team_boxscore("mlv", 2025)
 glimpse(team_boxscores)
 #> Rows: 918

@@ -62,17 +62,17 @@ A data frame containing the player info data for the specified seasons.
 try({load_player_info("mlv", 2024)})
 #> # A tibble: 2,418 × 29
 #>    match_id season match_datetime      player_id player_name          first_name
-#>       <dbl>  <dbl> <dttm>                  <dbl> <chr>                <chr>     
-#>  1  2125267   2024 2024-01-25 01:00:00   2130330 Natalia Valentin-An… Natalia   
-#>  2  2125267   2024 2024-01-25 01:00:00   2130314 Sydney Hilley        Sydney    
-#>  3  2125267   2024 2024-01-25 01:00:00   2130327 Kendall White        Kendall   
-#>  4  2125267   2024 2024-01-25 01:00:00   2130317 Brooke Nuneviller    Brooke    
-#>  5  2125267   2024 2024-01-25 01:00:00   2130312 Tori Dixon           Tori      
-#>  6  2125267   2024 2024-01-25 01:00:00   2130329 Gina Prososki        Gina      
-#>  7  2125267   2024 2024-01-25 01:00:00   2130320 Jess Schaben-Lansman Jess      
-#>  8  2125267   2024 2024-01-25 01:00:00   2130332 Paige Briggs         Paige     
-#>  9  2125267   2024 2024-01-25 01:00:00   2130319 Nia Reed             Nia       
-#> 10  2125267   2024 2024-01-25 01:00:00   2130316 Allison Mayfield     Allison   
+#>       <dbl>  <dbl> <dttm>              <chr>     <chr>                <chr>     
+#>  1  2125267   2024 2024-01-25 01:00:00 2130330   Natalia Valentin-An… Natalia   
+#>  2  2125267   2024 2024-01-25 01:00:00 2130314   Sydney Hilley        Sydney    
+#>  3  2125267   2024 2024-01-25 01:00:00 2130327   Kendall White        Kendall   
+#>  4  2125267   2024 2024-01-25 01:00:00 2130317   Brooke Nuneviller    Brooke    
+#>  5  2125267   2024 2024-01-25 01:00:00 2130312   Tori Dixon           Tori      
+#>  6  2125267   2024 2024-01-25 01:00:00 2130329   Gina Prososki        Gina      
+#>  7  2125267   2024 2024-01-25 01:00:00 2130320   Jess Schaben-Lansman Jess      
+#>  8  2125267   2024 2024-01-25 01:00:00 2130332   Paige Briggs         Paige     
+#>  9  2125267   2024 2024-01-25 01:00:00 2130319   Nia Reed             Nia       
+#> 10  2125267   2024 2024-01-25 01:00:00 2130316   Allison Mayfield     Allison   
 #> # ℹ 2,408 more rows
 #> # ℹ 23 more variables: last_name <chr>, jersey_number <dbl>,
 #> #   primary_position <dbl>, roster_status <chr>, is_foreign <lgl>,

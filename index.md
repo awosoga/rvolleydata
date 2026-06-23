@@ -13,6 +13,7 @@ You can install the CRAN version of
 with:
 
 ``` r
+
 install.packages("rvolleydata")
 ```
 
@@ -20,6 +21,7 @@ You can install the development version of rvolleydata from
 [GitHub](https://github.com/awosoga/rvolleydata) with:
 
 ``` r
+
 # install.packages("devtools")
 devtools::install_github("awosoga/rvolleydata")
 ```

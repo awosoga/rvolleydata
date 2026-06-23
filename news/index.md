@@ -2,6 +2,8 @@
 
 ## rvolleydata 2.0.0
 
+CRAN release: 2026-01-08
+
 ### Major changes
 
 - Deprecated all `load_league_xxx()` functions in favor of more general
