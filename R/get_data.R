@@ -27,7 +27,6 @@ utils::globalVariables(c("season"))
 #' try({load_schedule("mlv", 2024)})
 
 load_schedule <- function(league = NULL, seasons = NULL) {
-
   return(get_data(league, seasons))
 }
 
@@ -54,7 +53,6 @@ load_schedule <- function(league = NULL, seasons = NULL) {
 #' try({load_officials("mlv", 2024)})
 #'
 load_officials <- function(league = NULL, seasons = NULL) {
-
   return(get_data(league, seasons))
 }
 
@@ -87,7 +85,6 @@ load_officials <- function(league = NULL, seasons = NULL) {
 #' \donttest{try({load_pbp("mlv", 2024)})}
 
 load_pbp <- function(league = NULL, seasons = NULL) {
-
   return(get_data(league, seasons))
 }
 
@@ -134,7 +131,6 @@ load_pbp <- function(league = NULL, seasons = NULL) {
 #' try({load_player_info("mlv", 2024)})
 
 load_player_info <- function(league = NULL, seasons = NULL) {
-
   return(get_data(league, seasons))
 }
 
@@ -190,7 +186,6 @@ load_player_info <- function(league = NULL, seasons = NULL) {
 #' \donttest{try({load_player_boxscore("mlv", 2024)})}
 
 load_player_boxscore <- function(league = NULL, seasons = NULL) {
-
   return(get_data(league, seasons))
 }
 
@@ -237,8 +232,7 @@ load_player_boxscore <- function(league = NULL, seasons = NULL) {
 #' try({load_team_boxscore("mlv", 2024)})
 
 load_team_boxscore <- function(league = NULL, seasons = NULL) {
-
-return(get_data(league, seasons))
+  return(get_data(league, seasons))
 }
 
 #' Load cleaned team staff data from the volleydata repository.
@@ -264,7 +258,6 @@ return(get_data(league, seasons))
 #' try({load_team_staff("mlv", 2024)})
 
 load_team_staff <- function(league = NULL, seasons = NULL) {
-
   return(get_data(league, seasons))
 }
 
@@ -279,12 +272,30 @@ load_team_staff <- function(league = NULL, seasons = NULL) {
 #' |match_id                         |  int  |
 #' |season                           |  int  |
 #' |match_datetime                   |  chr  |
+#' |opening_set_coin_toss_winner     |  chr  |
+#' |opening_set_serving_team         |  chr  |
+#' |opening_set_left_side_team       |  chr  |
+#' |deciding_set_coin_toss_winner    |  chr  |
+#' |deciding_set_serving_team        |  chr  |
+#' |deciding_set_left_side_team      |  chr  |
 #' |set                              |  int  |
 #' |set_start_time                   |  chr  |
 #' |set_end_time                     |  chr  |
 #' |set_duration                     |  int  |
 #' |set_final_home_score             |  int  |
 #' |set_final_away_score             |  int  |
+#' |home_team_starter_position_1     |  int  |
+#' |home_team_starter_position_2     |  int  |
+#' |home_team_starter_position_3     |  int  |
+#' |home_team_starter_position_4     |  int  |
+#' |home_team_starter_position_5     |  int  |
+#' |home_team_starter_position_6     |  int  |
+#' |away_team_starter_position_1     |  int  |
+#' |away_team_starter_position_2     |  int  |
+#' |away_team_starter_position_3     |  int  |
+#' |away_team_starter_position_4     |  int  |
+#' |away_team_starter_position_5     |  int  |
+#' |away_team_starter_position_6     |  int  |
 #' |event_type                       |  chr  |
 #' |event_time                       |  chr  |
 #' |libero_enters                    |  lgl  |
@@ -334,6 +345,5 @@ load_team_staff <- function(league = NULL, seasons = NULL) {
 #' \donttest{try({load_events_log("mlv", 2024)})}
 
 load_events_log <- function(league = NULL, seasons = NULL) {
-
   return(get_data(league, seasons))
 }
