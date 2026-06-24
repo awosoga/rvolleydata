@@ -1,5 +1,7 @@
 # Changelog
 
+## rvolleydata 2.0.1
+
 ## rvolleydata 2.0.0
 
 CRAN release: 2026-01-08
