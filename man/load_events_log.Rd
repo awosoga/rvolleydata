@@ -17,12 +17,30 @@ A data frame containing the events log data for the specified seasons.\tabular{l
    match_id \tab int \cr
    season \tab int \cr
    match_datetime \tab chr \cr
+   opening_set_coin_toss_winner \tab chr \cr
+   opening_set_serving_team \tab chr \cr
+   opening_set_left_side_team \tab chr \cr
+   deciding_set_coin_toss_winner \tab chr \cr
+   deciding_set_serving_team \tab chr \cr
+   deciding_set_left_side_team \tab chr \cr
    set \tab int \cr
    set_start_time \tab chr \cr
    set_end_time \tab chr \cr
    set_duration \tab int \cr
    set_final_home_score \tab int \cr
    set_final_away_score \tab int \cr
+   home_team_starter_position_1 \tab int \cr
+   home_team_starter_position_2 \tab int \cr
+   home_team_starter_position_3 \tab int \cr
+   home_team_starter_position_4 \tab int \cr
+   home_team_starter_position_5 \tab int \cr
+   home_team_starter_position_6 \tab int \cr
+   away_team_starter_position_1 \tab int \cr
+   away_team_starter_position_2 \tab int \cr
+   away_team_starter_position_3 \tab int \cr
+   away_team_starter_position_4 \tab int \cr
+   away_team_starter_position_5 \tab int \cr
+   away_team_starter_position_6 \tab int \cr
    event_type \tab chr \cr
    event_time \tab chr \cr
    libero_enters \tab lgl \cr

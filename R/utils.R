@@ -1,3 +1,4 @@
+options(warn = -1)
 validate_seasons <- function(seasons, start_year) {
   if (!is.numeric(seasons)) {
     stop("Expected a numeric vector of years")
@@ -53,20 +54,28 @@ get_data <- function(league = NULL, seasons) {
     data <- tibble::tibble()
 
     for (season in seasons) {
-      temp <- readr::read_csv(
-        paste0(
-          "https://github.com/awosoga/volleydata/releases/download/",
-          lg,
-          gsub("_", "-", type),
-          "/",
-          lg,
-          type,
-          "_",
-          season,
-          ".csv"
-        ),
-        show_col_types = FALSE
-      )
+      temp <-
+        tryCatch(
+          {
+            readr::read_csv(
+              paste0(
+                "https://github.com/awosoga/volleydata/releases/download/",
+                lg,
+                gsub("_", "-", type),
+                "/",
+                lg,
+                type,
+                "_",
+                season,
+                ".csv"
+              ),
+              show_col_types = FALSE
+            )
+          },
+          error = function(e) {
+            return(tibble::tibble())
+          }
+        )
       data <- dplyr::bind_rows(data, temp)
     }
   } else {

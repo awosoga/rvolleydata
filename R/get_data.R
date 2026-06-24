@@ -6,7 +6,7 @@ utils::globalVariables(c("season"))
 #' @param league A string specifying which of "mlv", "lovb", or "au" to load data for.
 #' @param seasons An integer or vector of integers of seasons to fetch data for. Defaults to all available seasons.
 #'
-#'                All years must be 2023 or later.
+#'                All years must be 2022 or later.
 #'
 #' @returns
 #' |Column Name                      |  Type  |
