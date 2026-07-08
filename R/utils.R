@@ -1,4 +1,3 @@
-options(warn = -1)
 validate_seasons <- function(seasons, start_year) {
   if (!is.numeric(seasons)) {
     stop("Expected a numeric vector of years")
@@ -69,7 +68,9 @@ get_data <- function(league = NULL, seasons) {
                 season,
                 ".csv"
               ),
-              show_col_types = FALSE
+              show_col_types = FALSE,
+              progress = FALSE,
+              guess_max = 10000
             )
           },
           error = function(e) {
@@ -89,7 +90,9 @@ get_data <- function(league = NULL, seasons) {
         type,
         ".csv"
       ),
-      show_col_types = FALSE
+      show_col_types = FALSE,
+      progress = FALSE,
+      guess_max = 10000
     )
     data <- data |> dplyr::filter(season %in% seasons)
   }
