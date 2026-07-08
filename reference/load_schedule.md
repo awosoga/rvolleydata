@@ -44,16 +44,16 @@ try({load_schedule("mlv", 2024)})
 #> # A tibble: 87 × 10
 #>    season date       home_team   away_team home_team_set_wins away_team_set_wins
 #>     <dbl> <date>     <chr>       <chr>                  <dbl>              <dbl>
-#>  1   2024 2024-01-24 Atlanta Vi… Omaha Su…                  3                  2
-#>  2   2024 2024-01-25 Columbus F… Grand Ra…                  0                  3
-#>  3   2024 2024-01-26 Atlanta Vi… Orlando …                  3                  2
-#>  4   2024 2024-02-01 San Diego … Atlanta …                  0                  3
-#>  5   2024 2024-02-03 San Diego … Omaha Su…                  0                  3
-#>  6   2024 2024-02-07 Vegas Thri… Omaha Su…                  3                  2
-#>  7   2024 2024-02-09 Grand Rapi… Atlanta …                  3                  1
-#>  8   2024 2024-02-10 Vegas Thri… Orlando …                  1                  3
-#>  9   2024 2024-02-12 Omaha Supe… Grand Ra…                  3                  1
-#> 10   2024 2024-02-12 Orlando Va… Atlanta …                  2                  3
+#>  1   2024 2024-01-24 Omaha Supe… Atlanta …                  2                  3
+#>  2   2024 2024-01-25 Grand Rapi… Columbus…                  3                  0
+#>  3   2024 2024-01-26 Orlando Va… Atlanta …                  2                  3
+#>  4   2024 2024-02-01 Atlanta Vi… San Dieg…                  3                  0
+#>  5   2024 2024-02-03 Omaha Supe… San Dieg…                  3                  0
+#>  6   2024 2024-02-07 Omaha Supe… Vegas Th…                  2                  3
+#>  7   2024 2024-02-09 Atlanta Vi… Grand Ra…                  1                  3
+#>  8   2024 2024-02-10 Orlando Va… Vegas Th…                  3                  1
+#>  9   2024 2024-02-12 Grand Rapi… Omaha Su…                  1                  3
+#> 10   2024 2024-02-12 Atlanta Vi… Orlando …                  3                  2
 #> # ℹ 77 more rows
 #> # ℹ 4 more variables: result <chr>, match_id <dbl>, phase <chr>, league <chr>
 ```

@@ -101,10 +101,6 @@ A data frame containing the events log data for the specified seasons.
 
 ``` r
 try({load_events_log("mlv", 2024)})
-#> Warning: One or more parsing issues, call `problems()` on your data frame for details,
-#> e.g.:
-#>   dat <- vroom(...)
-#>   problems(dat)
 #> # A tibble: 25,558 × 70
 #>    match_id season match_datetime      opening_set_coin_toss_winner
 #>       <dbl>  <dbl> <dttm>              <chr>                       
