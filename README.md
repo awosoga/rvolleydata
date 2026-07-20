@@ -52,5 +52,5 @@ structures.
 
 ## Acknowledgement
 
-A big thanks to [Rebecca Lai](https://www.rebeccalai.net) for the
+A big thanks to [Rebecca Lai](https://rebeccalai.net) for the
 awesome logo design!
