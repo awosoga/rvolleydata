@@ -50,4 +50,4 @@ Data from matches played during the 2021 season are also not included due to inc
 
 ## Acknowledgement
 
-A big thanks to [Rebecca Lai](https://www.rebeccalai.net) for the awesome logo design!
+A big thanks to [Rebecca Lai](https://rebeccalai.net) for the awesome logo design!
