@@ -101,7 +101,7 @@ A data frame containing the events log data for the specified seasons.
 
 ``` r
 try({load_events_log("mlv", 2024)})
-#> # A tibble: 25,558 × 70
+#> # A tibble: 25,558 × 78
 #>    match_id season match_datetime      opening_set_coin_toss_winner
 #>       <dbl>  <dbl> <dttm>              <chr>                       
 #>  1  2125309   2024 2024-03-24 23:00:00 away                        
@@ -115,7 +115,7 @@ try({load_events_log("mlv", 2024)})
 #>  9  2125309   2024 2024-03-24 23:00:00 away                        
 #> 10  2125309   2024 2024-03-24 23:00:00 away                        
 #> # ℹ 25,548 more rows
-#> # ℹ 66 more variables: opening_set_serving_team <chr>,
+#> # ℹ 74 more variables: opening_set_serving_team <chr>,
 #> #   opening_set_left_side_team <chr>, set <dbl>, set_start_time <dttm>,
 #> #   set_end_time <dttm>, set_duration <dbl>, set_final_home_score <dbl>,
 #> #   set_final_away_score <dbl>, home_team_starter_position_1 <dbl>,
