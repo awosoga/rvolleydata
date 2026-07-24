@@ -30,7 +30,10 @@ devtools::install_github("awosoga/rvolleydata")
 
 Please refer to the [package
 vignette](https://awosoga.github.io/rvolleydata/articles/rvolleydata-how-to-use)
-for more information on how to use this library.
+for more information on how to use this library. For those who prefer to
+program in Python,
+[pyvolleydata](https://pyvolleydata.readthedocs.io/en/latest/) has
+complete function parity with this package.
 
 ## Note
 
